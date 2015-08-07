@@ -1,0 +1,5110 @@
+ll 
+head chainJobs.csh
+for T in `cat target.list | sed -e "s#${FASTADIR}/##"`; do echo "$T" >> xxx; done
+head xxx 
+echo $FASTADIR
+vi cmd
+vi ../cmd 
+cat ../cmd 
+export FASTADIR="/home/qczhang/lib/bowtie-lib/fasta";
+for T in `cat target.list | sed -e "s#${FASTADIR}/##"`; do echo "$T" >> xxx; done
+head xxx 
+echo $FASTADIR
+cat target.list | sed -e "s#${FASTADIR}/##"
+`cat target.list | sed -e "s#${FASTADIR}/##"` >> xxx
+for T in `cat target.list | sed -e "s#${FASTADIR}/##"`; do echo $T >> xxx; done
+head xxx 
+ll 
+ll
+rm xxx 
+ll 
+rm chainJobs.csh
+ll 
+cd .
+cd ..
+ll 
+tail cmd
+head nm1_pan2/chainJobs.csh.1 
+head nm1_pan2/target.list 
+ll nm1_pan2/example.psl 
+head nm1_pan2/example.psl 
+cd nm1_pan2/
+vi doChainning.pl
+ll 
+ll nm1_pan2/
+ll nm1_pan2/chain
+vi doChainning.pl
+ll 
+vi doLastz.pl 
+vi doChainning.pl
+zcat psl/nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000.*.psl.gz     | axtChain -psl -verbose=0 -minScore=5000 -linearGap=medium stdin /home/qczhang/lib/bowtie-lib/fasta/nomLeu1.UCSC.01_05_13.2bit /home/qczhang/lib/bowtie-lib/fasta/panTro2.UCSC.12_18_12.2bit stdout    | chainAntiRepeat /home/qczhang/lib/bowtie-lib/fasta/nomLeu1.UCSC.01_05_13.2bit /home/qczhang/lib/bowtie-lib/fasta/panTro2.UCSC.12_18_12.2bit stdin chain/nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000.chain
+ll 
+ll chain
+head chain/nomLeu1.UCSC.01_05_13.2bit\:GL397261\:0-50010000.chain 
+head -100 chain/nomLeu1.UCSC.01_05_13.2bit\:GL397261\:0-50010000.chain 
+ll 
+ls
+cd ../
+mkdir ESC+CP
+cd ESC+CP/
+cp ../MEF-ESC/hand1-lncrna.list ./
+vi hand1-lncrna.list 
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/chip-seq/Analysis/GENE-expression/ESC+CP/GENE-21/gene-21.all ./
+ls
+cd sunny/cliff/correlation/refseq-14/ESC+CP/
+../../correlation.pl gene-21.all hand1-lncrna.list gene-21-lncrna.matrix &
+cp gene-21.all ooo
+../MEF-ESC/test-3.pl hand1-lncrna.list > gene-21-lncrna.list &
+ls
+vi gene-21-lncrna.list 
+../MEF-ESC/correlation_list.pl gene-21-lncrna.list gene-21-lncrna.dat &
+vi gene-21-lncrna.dat 
+tail cmd >> doChainning.pl 
+vi gene-21-lncrna.matrix 
+wc -l gene-21-lncrna.matrix 
+vi gene-21-lncrna.matrix 
+vi gene-21.all 
+vi gene-21-lncrna.matrix 
+vi gene-21-lncrna.dat 
+vi gene-21.all 
+vi gene-21-lncrna.matrix 
+mv shell lastz_shell
+ls
+mkdir chain_shell
+module add r/3.0.1
+cat ../doChainning.pl 
+cat ../doLastz.pl 
+cd sunny/cliff/correlation/
+cat R_note 
+module add r/3.0.1
+cd sunny/cliff/correlation/
+perl -c ../doChainning.pl 
+ll 
+ll chain
+cd ..
+ll 
+perl doChainning.pl nm1_pan2/
+R
+ls
+ll nm1_pan2/chain_shell/
+cat nm1_pan2/chain_shell/nomLeu1.UCSC.01_05_13.2bit\:GL397261\:0-50010000.sh 
+cp gene-21-lncrna.matrix lncRNA.gene.corr
+perl doChainning.pl ~/work/genomeAlignment/nm1_pan2/
+R
+cat nm1_pan2/chain_shell/nomLeu1.UCSC.01_05_13.2bit\:GL397261\:0-50010000.sh 
+cd ESC-CP/
+ls
+cd ../refseq-14/ESC+CP/
+vi doChainning.pl 
+ll 
+ll nm1_pan2/
+cd nm1_pan2/
+ll 
+grep zcat chainJobs.csh.1 | wc -l
+rm chainJobs.csh.1 
+ll 
+cd chain_shell/
+ll 
+cd ../chain
+mv nomLeu1.UCSC.01_05_13.2bit\:GL397261\:0-50010000.chain xxx
+cd ../../
+perl doChainning.pl ~/work/genomeAlignment/nm1_pan2/
+R
+mv Rplots.pdf gene-21-lncrna.pdf
+qstat
+ll 
+cat test.e4997245 
+qstat
+qdel test
+qstat
+ll nm1_pan2/
+ll nm1_pan2/chain
+which axtChain
+../../src/read.pl 
+vi ../../src/read.pl 
+cp ../../../../work/chromHMM/GSE47949/2-track/heatmap-bivalent/csv.pl ./
+vi csv.pl 
+perl -c doChainning.pl 
+head lncRNA.gene.corr 
+perl checkLastz.pl ~/work/genomeAlignment/nm1_pan2/
+vi checkLastz.pl 
+ll nm1_pan2/
+ll 
+cat test.e4997245 
+rm test.e4997245 test.o4997245 
+ll 
+vi csv.pl 
+vi checkLastz.pl 
+./csv.pl gene-21-lncrna.matrix > gene-21-lncrna.csv
+ll 
+head gene-21-lncrna.csv 
+perl doChainning.pl ~/work/genomeAlignment/nm1_pan2/ 
+ll /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+vi /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+head /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+head gene-21-lncrna.csv 
+perl doChainning.pl ~/work/genomeAlignment/nm1_pan2/ 
+vi doChainning.pl
+ll 
+qstat
+ll 
+R
+cat test.e4997250 
+ls
+qstat
+qdel test
+mv Rplots.pdf gene-21-lncrna-2.pdf
+cat nm1_pan2/chain_shell/doChainning0.sh 
+vi doChainning.pl 
+qstat
+ll 
+cat test.e4997250 
+ll nm1_pan2/
+ll nm1_pan2/chain_shell/
+ll nm1_pan2/chain/
+perl doChainning.pl ~/work/genomeAlignment/nm1_pan2/ 
+ll /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+cat /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+qstat
+ll 
+cat cmd
+ll 
+cd ~/ncRNAhomo/synteny/
+ll
+cat note 
+R
+mv Rplots.pdf gene-21-lncrna-3.pdf
+R
+mv Rplots.pdf gene-21-lncrna-4.pdf
+ll 
+vi rox1.synteny 
+R
+mv Rplots.pdf gene-21-lncrna-5.pdf
+R
+mv Rplots.pdf gene-21-lncrna-5.pdf
+vi gene-21-lncrna.csv 
+head gene-21-lncrna.csv 
+R
+mv Rplots.pdf gene-21-lncrna-5.pdf 
+R
+mv Rplots.pdf gene-21-lncrna-5.pdf 
+qstat
+cd ~/work/genomeAlignment/
+ll
+R
+tail test.e4997251 
+mv Rplots.pdf gene-21-lncrna-5.pdf 
+vi test.e4997251 
+ll 
+ll nm1_pan2/chain
+ll nm1_pan2/chain/nomLeu1.UCSC.01_05_13.2bit\:GL397261\:0-50010000.chain 
+diff nm1_pan2/chain/xxx nm1_pan2/chain/nomLeu1.UCSC.01_05_13.2bit\:GL397261\:0-50010000.chain | wc -l
+ll 
+qacct -j 4997251
+ll
+ll test.*
+rm test.*
+ll 
+chmod +x doChainning.pl 
+ll
+ll logs/
+ll 
+qrsh -now n
+R
+ll 
+R
+mv Rplots.pdf gene-21-lncrna-6.pdf 
+vi doLastz.pl 
+ll 
+vi doChainning.pl 
+ll 
+cd nm1_pan2/
+ll
+ll chain_shell/
+mkdir test
+mv chain* test
+ll test
+ll 
+mkdir chain_shell
+mkdir chain
+ll 
+cd ..
+ll 
+R
+mv Rplots.pdf gene-21-lncrna-6.pdf 
+vi doChainning.pl 
+ll 
+head log
+tail log
+perl doChainning.pl ~/work/genomeAlignment/nm1_pan2/ 1> log 2> err
+vi /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+ll 
+wc -l log
+head log
+tail log
+R
+mv Rplots.pdf gene-21-lncrna-7.pdf 
+vi doChainning.pl 
+ll 
+head /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+R
+mv Rplots.pdf gene-21-lncrna-8.pdf 
+ll nm1_pan2/test/chain_shell/doChainning0.sh 
+cat nm1_pan2/test/chain_shell/doChainning0.sh 
+vi doChainning.pl 
+head /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning898.sh
+wc -l /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning898.sh
+grep zcat nm1_pan2/chain_shell/*.sh | wc -l
+wc -l nm1_pan2/target.list 
+head nm1_pan2/target.list 
+ls
+grep qsub doChainning.pl 
+screen 
+ll 
+ll 
+qstat | wc -l
+ll
+ll log
+ll err
+wc -l log
+tail log
+qstat -u \* | grep extended | awk '{ if ($5=="r") print $4 }' | sort | uniq -c 
+qstat -u \* | grep standard | awk '{ if ($5=="r") print $4 }' | sort | uniq -c 
+qstat | head
+qstat | tail
+qstat -u \* | grep standard | awk '{ if ($5=="r") print $4 }' | sort | uniq -c 
+qstat -u \* | grep extended | awk '{ if ($5=="r") print $4 }' | sort | uniq -c 
+cd 
+ll 
+cd ncRNAhomo/
+ll
+mkdir structure
+ll 
+cd structure/
+ll 
+cd ..
+ll 
+ll blast/
+rmdir blast/
+ll 
+cd structure/
+ll 
+qstat | wc -l
+ll ~/work/genomeAlignment/log
+tail ~/work/genomeAlignment/log
+wc -l ~/work/genomeAlignment/log
+qstat | tail
+qstat | tail -100
+qstat | head
+ssh changrial
+cd sunny/cliff/correlation/refseq-14/ESC+CP/
+ls
+vi hand1-lncrna.list 
+cp hand1-lncrna.list lncRNA.gene.corr 
+cd sunny/cliff/correlation/refseq-14/ESC+CP/
+module add r/3.0.1
+R
+vi lncRNA.gene.corr 
+ls
+vi gene-21-lncrna.csv 
+ls
+exit
+qrsh -now n
+exit
+qrsh -now n
+ssh changrila
+ll 
+qstat
+ll 
+cd work/
+ll
+cd genomeAlignment/
+ll
+cd ..
+ll genomeAlignment/test.o* > xxx
+vi xxx 
+rm genomeAlignment/test.o*
+ll genomeAlignment/test.e* > xxx
+vi xxx 
+head xxx 
+head genomeAlignment/test.e5012163
+tail genomeAlignment/test.e5012163
+ll 
+for i in genomeAlignment/test.e*; do cat $i >> test.err; done
+rm test.err
+for i in genomeAlignment/test.e*; do echo $i>> test.err; cat $i >> test.err; done
+ll 
+rm xxx 
+ll 
+ll -h
+vi test.err 
+ll 
+rm genomeAlignment/test.e*;
+ll genomeAlignment/
+rm genomeAlignment/err 
+ll
+mv test.err genomeAlignment/
+ll
+cd genomeAlignment/
+ll 
+ll logs
+mv test.err logs/test.chainning.err
+ll 
+mv log logs/log.chaining
+ll 
+cd nm1_pan2/
+cd ..
+cd logs
+ll 
+mv log.chaining log.chainning 
+ll 
+cd ..
+ll
+ll nm1_pan2/
+ll nm1_pan2/chain_shell/* > xxx
+vi xxx 
+ll nm1_pan2/chain/* > xxx
+ll 
+vi xxx 
+wc -l xxx 
+wc -l nm1_pan2/target.list
+head nm1_pan2/target.list
+head xxx 
+head nm1_pan2/chain/nomLeu1.UCSC.01_05_13.2bit:ADFV01134425:0-126038.chain
+ll 
+ll nm1_pan2/
+ll 
+head xxx 
+ll
+cd ~.
+cd 
+cd ncRNAhomo/
+ll
+cd synteny/
+ll
+vi rox1.synteny 
+vi rox2.synteny 
+ll
+cd work/genomeAlignment/
+ll
+head xxx 
+wc -l xxx nm1_pan2/target.list 
+head xxx nm1_pan2/target.list 
+grep "nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000" logs/log.chainning 
+head logs/log.chainning 
+head /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+grep "nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000" /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+head logs/log.chainning 
+qacct -j 5012163
+grep -n "nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000" /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+wc -l /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+ll
+head xxx 
+mv xxx logs/chain.1run
+ll 
+vi doChainning.pl 
+head /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+head -3 /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning0.sh
+vi doChainning.pl 
+ll 
+ll logs/chain.1run 
+vi logs/chain.1run 
+head logs/chain.1run 
+head nm1_pan2/chain/nomLeu1.UCSC.01_05_13.2bit:ADFV01134425:0-126038.chain
+less nm1_pan2/chain/nomLeu1.UCSC.01_05_13.2bit:ADFV01134425:0-126038.chain
+cat nm1_pan2/chain/nomLeu1.UCSC.01_05_13.2bit:ADFV01134425:0-126038.chain
+vi doChainning.pl 
+perl -c doChainning.pl 
+vi doChainning.pl 
+perl -c doChainning.pl 
+vi doChainning.pl 
+perl -c doChainning.pl 
+screen -r
+screen -r 25793.pts-22.scg3-ln01
+screen -r 4968.pts-45.scg3-ln01
+screen -r 10977.pts-105.scg3-ln01
+ll 
+screen -r 10977.pts-105.scg3-ln01
+ll 
+qstat | wc -l
+wc -l logs/chain.1run nm1_pan2/target.list 
+qstat
+qstat | wc -l
+qstat | grep test | wc -l
+wc -l logs/chain.1run nm1_pan2/target.list 
+ll
+qstat | grep test | wc -l
+qstat | grep test | head
+ll
+tail test.e5031517
+tail test.e5031518
+tail test.e5031519
+grep 5031517 log
+grep -1 5031517 log
+cat /home/qczhang/work/genomeAlignment/nm1_pan2//chain_shell/doChainning.2.3.sh
+ll /home/qczhang/work/genomeAlignment/nm1_pan2//chain/nomLeu1.UCSC.01_05_13.2bit:GL397265:50000000-58224783.chain
+grep /home/qczhang/work/genomeAlignment/nm1_pan2//chain/nomLeu1.UCSC.01_05_13.2bit:GL397265:50000000-58224783.chain nm1_pan2/chain_shell/doChainning?.sh
+grep -n /home/qczhang/work/genomeAlignment/nm1_pan2//chain/nomLeu1.UCSC.01_05_13.2bit:GL397265:50000000-58224783.chain nm1_pan2/chain_shell/doChainning?.sh
+grep -1 -n /home/qczhang/work/genomeAlignment/nm1_pan2//chain/nomLeu1.UCSC.01_05_13.2bit:GL397265:50000000-58224783.chain nm1_pan2/chain_shell/doChainning?.sh
+ll /home/qczhang/work/genomeAlignment/nm1_pan2//chain/nomLeu1.UCSC.01_05_13.2bit:GL397265:0-50010000.chain
+ll 
+qstat | grep test | head
+qstat | grep test | wc -l
+wc -l logs/chain.1run nm1_pan2/target.list 
+ll test.e* | wc -l
+ll test.o* | wc -l
+ll test.e* | wc -l
+qstat | grep test |grep qw | wc -l
+ll nm1_pan2/chain_shell/doChainning.2.*.sh | wc -l
+ll nm1_pan2/chain_shell/doChainning.2.*.sh 
+cat nm1_pan2/chain_shell/doChainning.2.9.sh
+grep zcat nm1_pan2/chain_shell/doChainning.2.*.sh > xxx
+wc -l xxx 
+vi xxx 
+cut -f3 xxx > yyy
+head yyy 
+mv yyy xxx 
+ll 
+head xxx 
+wc -l logs/chain.1run nm1_pan2/target.list 
+head -2 logs/chain.1run nm1_pan2/target.list 
+vi logs/chain.1run
+head xxx 
+vi xxx 
+cut -f2 xxx > yyy; mv yyy xxx
+ll 
+head xxx 
+vi xxx 
+head xxx 
+head nm1_pan2/target.list 
+cp nm1_pan2/target.list yyy
+vi yyy 
+cut -f2 yyy >zzz; mv zzz yyy
+head yyy 
+head xxx 
+cp logs/chain.1run zzz
+vi zzz 
+cut -f2 zzz > aaa
+head aaa 
+mv aaa zzz
+ll 
+wc -l xxx yyy zzz 
+diff yyy zzz | wc -l
+head yyy zzz 
+cat xxx zzz | sort > aaa
+vi aaa 
+uniq aaa > bbb
+uniq -c aaa > bbb
+vi bbb 
+head bbb 
+grep "      2" bbb 
+grep nomLeu1.UCSC.01_05_13.2bit:ADFV01135047:0-78552 nm1_pan2/shell.*
+grep nomLeu1.UCSC.01_05_13.2bit:ADFV01135047:0-78552 nm1_pan2/chain_shell/.*
+grep nomLeu1.UCSC.01_05_13.2bit:ADFV01135047:0-78552 nm1_pan2/chain_shell/*
+ll /home/qczhang/work/genomeAlignment/nm1_pan2//chain/nomLeu1.UCSC.01_05_13.2bit:ADFV01135047:0-78552.chain
+grep /home/qczhang/work/genomeAlignment/nm1_pan2//chain/nomLeu1.UCSC.01_05_13.2bit:ADFV01135047:0-78552.chain logs/chain.1run 
+head logs/chain.1run
+grep chain/nomLeu1.UCSC.01_05_13.2bit:ADFV01135047:0-78552.chain logs/chain.1run 
+vi logs/chain.1run 
+ll 
+rm xxx yyy zzz 
+ll 
+qstat | wc -l
+qstat
+ll 
+qstat | wc -l
+cd 
+cd lib/
+ll
+cd ucsc/
+ll
+cd ..
+ll
+ll bowtie-lib/
+ll fasta
+ll 
+cd bowtie-lib/
+ll 
+ll fasta
+ll fasta/
+ll ../
+cd ../
+ll 
+ln -s /srv/gs1/projects/snyder/qczhang/fasta/
+ll 
+ll fasta/
+cd fasta/flies/
+ll
+cat note 
+vi note 
+ll 
+cat note 
+wget http://cracs.fc.up.pt/~nf/dame/fasta/dame.w11.fasta.gz
+wget http://cracs.fc.up.pt/~nf/dame/fasta/dame.h5.fasta.gz
+ll 
+gunzip *.gz
+ll -h
+head dame.h5.fasta
+less dame.h5.fasta 
+ll 
+exit
+ll 
+cd rna_snp/
+ll
+cd new/
+ll
+cd neighbor_effect/
+ll
+ll 
+cd ..
+ll 
+ll pars/
+ll 
+ll ribosnitch/
+cd ribosnitch/
+ll 
+grep Double *.pl
+vi struct.enviroment.2.pl 
+head -20 struct.enviroment.2.pl 
+ll 
+cd rna_snp/
+ll
+cd new/
+ll 
+ll ribosnitch/
+mv ribosnitch/ old_ribosnitch
+mkdir ribosnitch
+l 
+ll 
+cd ribosnitch/
+ll 
+head ribosnitch_91vs78.txt 
+ll 
+ln -s ../old_ribosnitch/struct.enviroment.2.pl struct.enviroment.ds.pl
+head struct.enviroment.ds.pl 
+perl struct.enviroment.ds.pl ribosnitch_91vs78.txt 1> out 2> err
+ll 
+head err 
+head out 
+vi struct.enviroment.ds.pl 
+ll 
+rm struct.enviroment.ds.pl 
+cp ../old_ribosnitch/struct.enviroment.2.pl struct.enviroment.ds.pl
+vi struct.enviroment.ds.pl 
+perl struct.enviroment.ds.pl ribosnitch_91vs78.txt 1> out 2> err
+ll 
+head out 
+vi out 
+ll 
+mv out out.struct.enviroment.ds
+ll 
+rm err 
+ll 
+cp out.struct.enviroment.ds results.ds
+vi results.ds 
+ll 
+cat results.ds 
+:q
+ll -a
+ll ../old_ribosnitch/ -a
+ll 
+R
+module add r/3.0.1 
+R
+ll 
+mv results.ds results_91vs78.ds 
+mv ds_nbr.pdf ds_nbr_91vs78.pdf 
+mv out.struct.enviroment.ds out.struct.enviroment.91vs78.ds 
+ll 
+perl struct.enviroment.ds.pl ribosnitch_92vs78.txt 1> out.struct.enviroment.92vs78.ds 2> err
+perl struct.enviroment.ds.pl ribosnitch_91vs92.txt 1> out.struct.enviroment.91vs92.ds 2> err
+ll 
+cp out.struct.enviroment.91vs92.ds results_91vs92.ds 
+cp out.struct.enviroment.92vs78.ds results_92vs78.ds 
+ll 
+vi results_91vs92.ds 
+vi results_92vs78.ds 
+ll 
+rm err 
+ll 
+R
+ll 
+cp ../old_ribosnitch/struct.enviroment.4.pl struct.enviroment.pattern.pl 
+vi struct.enviroment.pattern.pl 
+cat struct.enviroment.ds.pl >> struct.enviroment.pattern.pl 
+vi struct.enviroment.pattern.pl 
+ll 
+perl struct.enviroment.pattern.pl ribosnitch_91vs92.txt 1> out.struct.enviroment.91vs92.pattern 2> err
+perl struct.enviroment.pattern.pl ribosnitch_91vs78.txt 1> out.struct.enviroment.91vs78.pattern 2> err
+perl struct.enviroment.pattern.pl ribosnitch_92vs78.txt 1> out.struct.enviroment.92vs78.pattern 2> err
+ll 
+vi out.struct.enviroment.91vs78.pattern
+cp out.struct.enviroment.91vs78.pattern results_91vs78.pattern
+cp out.struct.enviroment.91vs92.pattern results_91vs92.pattern
+cp out.struct.enviroment.92vs78.pattern results_92vs78.pattern
+vi results_9*pattern
+vi results_91vs92.pattern 
+vi results_92vs78.pattern 
+ll 
+R
+ll 
+vi results_91vs92.pattern 
+cat err 
+rm err
+ll 
+R
+ll 
+Rexit
+exit
+ll 
+cd rna_snp/
+ll
+cd new/
+ll
+cd ribosnitch/
+ll
+cat ribosnitch_9* > ribosnitch.all.txt
+ll 
+head ribosnitch.all.txt 
+ll 
+perl struct.enviroment.ds.pl ribosnitch.all.txt 1> out.struct.enviroment.all.ds 2> err
+head out.struct.enviroment.all.ds 
+perl struct.enviroment.pattern.pl ribosnitch.all.txt 1> out.struct.enviroment.all.pattern 2> err
+cp out.struct.enviroment.all.ds results_all.ds
+vi results_all.ds 
+ll 
+cp out.struct.enviroment.all.pattern results_all.pattern
+vi results_all.pattern 
+ll 
+R
+module add r/3.0.1 
+R
+ll 
+qstat
+ll 
+cd work/genomeAlignment/
+ll
+ll test.o5031* > xxx
+vi xxx 
+rm xxx test.o5031*
+ll 
+head aaa bbb 
+rm aaa bbb 
+ll 
+rm err 
+ll 
+head log
+tail log
+qacct -j 5031514
+qacct -j 5031602
+ll 
+ll logs/
+head logs/test.chainning.err 
+for i in test.e*; do echo $i >> xxx; cat $i >> xxx; done
+ll xxx 
+head xxx 
+tail xxx 
+rm test.e*
+ll 
+mv xxx logs/test.chainning.err2 
+ll 
+mv log logs/log.chainning.2
+ll 
+ll nm1_pan2/
+ll nm1_pan2/chain_shell/*done | wc -l
+vi doChainning.pl 
+ll 
+ll nm1_pan2/chain_shell/*.2.sh | wc -l
+ll nm1_pan2/chain_shell/*.2.sh 
+ll nm1_pan2/chain_shell/*.2.*.sh | wc -l
+ll nm1_pan2/chain_shell/*.2.*.sh 
+cat nm1_pan2/chain_shell/doChainning.2.9.sh
+ll /home/qczhang/work/genomeAlignment/nm1_pan2//chain/nomLeu1.UCSC.01_05_13.2bit:GL397271:0-42511992.chain
+grep zcat nm1_pan2/chain_shell/doChainning.2.*.sh > xxx
+vi xxx 
+cut -f3 xxx > yyy
+head yyy 
+mv yyy xxx 
+for i in `cat yyy`; do ll $i; done
+for i in `cat xxx`; do ll $i; done
+for i in `cat xxx`; do ll $i >> yyy; done
+ll 
+wc -l yyy 
+vi yyy 
+rm xxx yyy 
+ll 
+ll logs/
+ll nm1_pan2/
+ll 
+cd 
+cd rna_snp/
+l 
+ll 
+cd new/
+ll
+cd neighbor_effect/
+ll
+ll *.pl
+ll 
+cd work/genomeAlignment/
+ll
+cd nm1_pan2/
+ll
+ll chain/ | wc -l
+ll chain/ > xxx
+head xxx 
+tail xxx 
+wc -l nomLeu1.UCSC.01_05_13.lst 
+wc -l target.list 
+head target.list 
+mv xxx chain.list
+ll 
+head chain.list 
+vi chain.list 
+ll 
+head shell.done 
+mv shell.done ../logs/
+ll 
+head raw.lst 
+wc -l raw.lst 
+ll 
+ll raw > xxx
+ll 
+cat xxx 
+ll 
+rm xxx 
+ll 
+rm raw.lst ../logs/
+ll 
+head shell.sh 
+mv shell.sh ../logs/
+ll 
+cd 
+cd rna_snp/
+ll
+cd new/
+ll
+ll neighbor_effect/
+cd neighbor_effect/
+ll 
+rm snp_strucdiff.txt 
+ln -s ../old_ribosnitch/strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12892.pars.withZscore.txt old.snp_structdiff.txt
+ll 
+head old.snp_structdiff.txt 
+ll 
+cd sunny/cliff/correlation/
+ls
+cd refseq-14/
+ls
+cd ESC+CP/
+ls
+ls *.dat
+pwd
+ls *.matrix
+vi gene-21.all 
+vi hand1-lncrna.list 
+Áll
+ll 
+ll
+ll -a
+cd ../MEF-ESC/
+ls
+ls *.dat
+history | grep all.strand.SNP.dist.txt > xxx
+vi hand1.dat 
+cat xxx 
+vi hand1-negtive.dat 
+ls *.matrix
+vi correlation.matrix 
+ls
+vi hand1.dat 
+history | grep bg.strand.SNP.dist.txt >> xxx 
+tail xxx 
+vi hand1-lncrna.csv 
+history | grep ribosnitch.strand.SNP.dist.txt >> xxx 
+tail xxx 
+cd ../ESC+CP/
+ls
+history | grep xxx > yyy
+vi yyy 
+history > yyy
+vi hand1-lncrna.list 
+cut -c 1-9 hand1-lncrna.list > t1
+vi yyy 
+ll 
+vi t1
+mv yyy history
+head history 
+cut -k 1-9 hand1-lncrna.list > t1
+cut -l 1-9 hand1-lncrna.list > t1
+cut -h
+cut --help
+:q
+cut -f hand1-lncrna.list > t1
+cut -d hand1-lncrna.list > t1
+cut -d 1-9 hand1-lncrna.list > t1
+vi hand1-lncrna.list 
+ls
+rm t1 ooo
+ls
+vi gene-21-lncrna.dat 
+ll 
+cd rna_snp/new/neighbor_effect/
+ll 
+cat xxx 
+cd rna_snp/new/neighbor_effect/
+ll
+vi history 
+ll 
+wc -l history 
+ll | grep strand
+vi getDistribution.pl 
+ll
+cp getDistribution.pl getDistribution.new.pl 
+ln -s ../ribosnitch/ribosnitch.all.txt 
+ll 
+head ribosnitch.all.txt 
+ll 
+head -1 ribosnitch.all.txt 
+head -1 old.snp_structdiff.txt 
+grep strand *.pl
+grep -i strand *.pl
+grep fdr ribosnitch.all.txt | wc -l
+head -2 ribosnitch.all.txt 
+vi ribosnitch.all.txt 
+ll 
+perl getDistribution.new.pl ribosnitch.all.txt 1> out 2> err
+head out 
+head err 
+wc -l err 
+wc -l ribosnitch.all.txt 
+ll 
+rm err 
+cat xxx history2
+mv xxx history2
+ll 
+head history2 
+cat history2 
+vi out 
+mv out ribosnitch.SNP.dist.new.txt
+head ribosnitch.SNP.dist.*
+tail ribosnitch.SNP.dist.*
+ll 
+cat history2 
+head all.strand.SNP.dist.txt 
+tail all.strand.SNP.dist.txt 
+cp all.strand.SNP.dist.txt all.strand.SNP.dist.new.txt 
+vi all.strand.SNP.dist.new.txt 
+cat ribosnitch.SNP.dist.new.txt >> all.strand.SNP.dist.new.txt 
+vi all.strand.SNP.dist.new.txt 
+vi getDistribution.new.pl 
+exit
+ll
+head all.strand.SNP.dist.new.txt 
+ll ../
+ll ../ribosnitch/
+ll ../
+ll ../strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.txt 
+head ../strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.txt 
+head -1 ../strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.txt 
+ll 
+ll *pl
+cd ..
+ll 
+head strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.txt 
+head -2 strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.txt 
+sort -k1,1n strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.txt -o xxx
+head xxx 
+:1
+vi xxx 
+ll 
+mv xxx strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt
+head strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.
+head strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt 
+ls
+cd ../../../../
+cd cliff/TSS/
+ls
+cd RNAP/
+ls
+cd bivalent/
+ls
+vi note 
+cd .././
+cd ../
+ls
+pwd
+cd CP
+ls
+vi note 
+cd ../RNAP/bivalent/
+vu note 
+vi note 
+ll 
+cd rna_snp/
+ll 
+cd new/
+ll 
+vi strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt 
+head -2 strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt 
+head -2 strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f1-15
+tail -2 strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f1-15
+cd rna_snp/
+ll 
+cd new/
+ll
+cd neighbor_effect/
+ll
+ll *pl
+cd ..
+head strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt 
+head strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f1-15
+tail strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f1-15
+tail strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f15
+wc -l strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM1289*
+head -800 strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f15 | sort > xxx
+vi xxx 
+head -800 strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f15 | sort -n > xxx
+vi xxx 
+tail -1000 strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f15 | sort -n > xxx
+vi xxx 
+rm xxx 
+tail strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f1-10
+head strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt | cut -f1-10
+head neighbor_effect/ribosnitch.all.txt | cut -f1-10
+head neighbor_effect/ribosnitch.all.txt | cut -f1-8
+vi selectNeg.pl
+perl -c selectNeg.pl 
+vi selectNeg.pl 
+perl -c s
+perl -c selectNeg.pl 
+vi selectNeg.pl 
+perl -c selectNeg.pl 
+vi selectNeg.pl 
+perl -c selectNeg.pl 
+ll 
+sort -k1,1n strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12892.pars.BCR.fdr.txt -o strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12892.pars.BCR.fdr.srtd.txt 
+sort -k1,1n strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12892-GM12878.pars.BCR.fdr.txt -o strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12892-GM12878.pars.BCR.fdr.srtd.txt 
+ll 
+head *srtd* | cut -f1-10
+tail *srtd* | cut -f1-10
+ll 
+ll 
+wc -l ribosnitch/ribosnitch*
+cd 
+ll 
+cd work/
+ll 
+cd genomeAlignment/
+ll 
+exit
+screen 
+screen -r
+screen -r 2621.pts-45.scg3-ln01
+exit
+qrsh -now n
+ll 
+echo "find ./nm1_pan2/chain/ -name \"*.chain\" | chainMergeSort -inputList=stdin | gzip -c > xx.yy.all.chain.gz" >> chainJobs.csh
+ll 
+cat chainJobs.csh 
+find ./nm1_pan2/chain/ -name "*.chain" >> xxx
+head xxx 
+wc -l xxx 
+rm xxx 
+ll nm1_pan2/
+vi chainJobs.csh 
+ll 
+cat chainJobs.csh 
+mv chainJobs.csh chainJobs.sh
+ll 
+qrsh -now n
+exit
+screen -r 10977.pts-105.scg3-ln01
+screen -r
+ll 
+vi chainJobs.sh 
+cat chainJobs.sh 
+pwd
+vi chainJobs.sh 
+which chainMergeSort
+vi chainJobs.sh 
+ll 
+qsub -cwd -N chainMerge -l h_vmem=6G -l h_rt=05:50:00 -m ea -M qczhang@stanford.edu -w e chainJobs.sh 
+vi cmd
+ll 
+cat cmd 
+ll 
+qstat
+ll 
+ll
+qstat
+cat chainJobs.sh 
+ll
+ll -h
+cat chainMerge.e5039427 
+rm chainMerge.*
+ll 
+mkdir nm1_pan2/net
+mv nomLeu1.panTro2.all.chain.gz nm1_pan2/net/
+ll 
+cd nm1_pan2/net/
+ll 
+gunzip nomLeu1.panTro2.all.chain.gz 
+ll 
+head nomLeu1.panTro2.all.chain 
+head -20  nomLeu1.panTro2.all.chain 
+head -200  nomLeu1.panTro2.all.chain 
+grep -n -v "^#" nomLeu1.panTro2.all.chain | head
+head -107840 nomLeu1.panTro2.all.chain | tail
+ll 
+head nomLeu1.panTro2.all.chain 
+ll 
+cd ..
+ll 
+cd ..
+ll 
+cat doChainning.pl 
+ll 
+cd nm1_pan2/
+ll 
+ll ~/lib/fasta/
+ln -s ~/lib/fasta/
+ll 
+ll fasta/
+ll fasta/nomLeu1.UCSC.01_05_13.sizes
+head fasta/nomLeu1.UCSC.01_05_13.sizes
+head -107840 nomLeu1.panTro2.all.chain | tail
+head -107840 net/nomLeu1.panTro2.all.chain | tail
+cd net/
+cd ../../
+l
+ls
+exit
+screen 
+cd ../correlation/
+ls
+cd refseq-14/
+ls
+cd ESC+CP/
+ls
+cd ../MEF-ESC/
+ls
+cd work/genomeAlignment/nm1_pan2/net/
+ll 
+screen 
+ll 
+head nomLeu1.panTro2.all.pre.chain 
+head -107840 nomLeu1.panTro2.all.pre.chain | tail 
+head -107940 nomLeu1.panTro2.all.pre.chain | tail -100
+chainPreNet nomLeu1.panTro2.all.chain ../fasta/nomLeu1.UCSC.01_05_13.sizes ../fasta/panTro2.UCSC.12_18_12.sizes nomLeu1.panTro2.all.pre.chain
+ll 
+ll -h
+ll 
+head neighbor_effect/ribosnitch.all.txt | cut -f1-8
+ll 
+vi selectNeg.pl 
+perl -c selectNeg.pl 
+vi selectNeg.pl 
+perl -c selectNeg.pl 
+wc -l ribosnitch/ribosnitch*
+vi count
+perl selectNeg.pl strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12878.pars.BCR.fdr.srtd.txt 742 1> ribosnitch/ribosnitch_91vs78.neg.txt 2> err
+ll 
+head err 
+rm err 
+perl selectNeg.pl strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12892.pars.BCR.fdr.srtd.txt 1046 1> ribosnitch/ribosnitch_91vs92.neg.txt
+perl selectNeg.pl strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12892-GM12878.pars.BCR.fdr.srtd.txt 665 1> ribosnitch/ribosnitch_92vs78.neg.txt
+ll 
+ll ribosnitch/
+cd neighbor_effect/
+ll 
+cd ..
+ll 
+ll ribosnitch/
+ll 
+mkdir old
+mv old_ribosnitch/ old/ribosnitch
+vi pick.pl 
+ll 
+mv neighbor_effect/ old/
+ll 
+ll ribosnitch/
+ll 
+cp old/neighbor_effect/ ./
+cp -r old/neighbor_effect/ ./
+ll 
+cd neighbor_effect/
+ll 
+rm old.snp_structdiff.txt 
+ll 
+cd ..
+ll 
+rm -r neighbor_effect/
+ll 
+mkdir neighbor_effect/
+ll old/neighbor_effect/
+ll old/neighbor_effect/ -tr
+mv old/neighbor_effect/history* old/neighbor_effect/getDistribution.new.pl old/neighbor_effect/ribosnitch.all.txt old/neighbor_effect/ribosnitch.*new.txt neighbor_effect/
+ll old/neighbor_effect/ -tr
+cd old/neighbor_effect/
+rm old.snp_structdiff.txt 
+ln -s ../ribosnitch/strucdiff.ShuffleAbsNonZero.rescaled.5pa.norm.GM12891-GM12892.pars.withZscore.txt snp_structdiff.txt
+ll 
+rm dist2SNP.pl 
+ln -s ../../pars/dist2SNP.pl
+ll 
+mv all.strand.SNP.dist.new.txt ../../neighbor_effect/
+ll 
+cd ..
+ll 
+cd ..
+ll 
+ll neighbor_effect/
+ll ../pa
+ll ../pars
+ll pars/
+ll 
+cd ../../../TSS/
+ls
+ll pars/
+ll 
+cd RNAP/
+ll ribosnitch/
+ls
+ll 
+ll neighbor_effect/
+cd bivalent/
+vu note 
+ll 
+ll old/
+ll old/ribosnitch/
+ll old/neighbor_effect/
+ll 
+cd neighbor_effect/
+ll 
+head -20 getDistribution.new.pl 
+head ribosnitch.SNP.dist.new.txt 
+ll 
+cd ..
+ll 
+cd ribosnitch/
+ll 
+cd ..
+ll 
+cd neighbor_effect/
+ll 
+cat ../ribosnitch/ribosnitch*neg.txt >> neg.all.txt
+vi neg.all.txt 
+ll 
+perl getDistribution.new.pl neg.all.txt 1> neg.SNP.dist.new.txt 
+ll 
+perl getDistribution.new.pl neg.all.txt 1> neg.SNP.dist.new.txt 2> err
+ll 
+rm err 
+ll 
+head neg.all.txt 
+ll 
+head neg.SNP.dist.new.txt 
+head ribosnitch.SNP.dist.new.txt 
+head *.SNP.dist.new.txt 
+grep -i neg all.strand.SNP.dist.new.txt | head
+paste neg.SNP.dist.new.txt ribosnitch.SNP.dist.new.txt | head -100
+ll 
+rm all.strand.SNP.dist.new.txt 
+vi all.strand.SNP.dist.new.txt 
+cat neg.SNP.dist.new.txt >> all.strand.SNP.dist.new.txt 
+vi all.strand.SNP.dist.new.txt 
+cat ribosnitch.SNP.dist.new.txt >> all.strand.SNP.dist.new.txt 
+vi all.strand.SNP.dist.new.txt 
+ll 
+head ribosnitch.SNP.dist.new.txt 
+head all.strand.SNP.dist.new.txt 
+exit
+ll ~/rna_snp/new/
+cd ~/rna_snp/new/
+ll neighbor_effect/
+ll old/neighbor_effect/
+diff all.SNP.dist.txt old/neighbor_effect/all.SNP.dist.txt | wc -l
+diff all.SNP.dist.txt old/neighbor_effect/all.SNP.dist.txt 
+rm all.SNP.dist.txt 
+ll 
+ll old/neighbor_effect/all.strand.SNP.dist.txt *
+ll 
+ll old/neighbor_effect/all.strand.SNP.dist.txt 
+diff all.strand.SNP.dist.txt old/neighbor_effect/all.strand.SNP.dist.txt | wc -l
+rm all.strand.SNP.dist.*
+ll 
+ll neighbor_effect/
+cd neighbor_effect/
+ll 
+tail neg.SNP.dist.new.txt ribosnitch.
+tail neg.SNP.dist.new.txt ribosnitch.SNP.dist.new.txt 
+vi note 
+ls
+exit
+ll 
+cd projects/
+ll
+cd preppi/
+ll 
+cd ci/
+ll
+head mouse_human.map 
+wc -l mouse_human.map 
+ll 
+head preppi_int.mouse.tab 
+wc -l preppi_int.mouse.tab 
+ll 
+head ci.1.intm 
+head ci.2.intm 
+ll 
+head list.origin 
+wc -l list.origin 
+grep -i cstf *
+ll 
+head ci.human.1.intm 
+grep -i u1a ci.human.1.intm 
+ll ~/
+ll ~/projects/
+ll 
+ll projects/
+ll projects/preppi/
+ll projects/preppi/ci/
+ll 
+ll projects/bak/
+ll projects/bak/changlab/
+ll projects/bak/changlab/rna/
+ll projects/bak/changlab/rna/rbp/
+ll projects/bak/changlab/rna/u1u2/
+ll 
+ll projects/preppi/ci/
+mkdir ci 
+cd ci/
+ln -s ~/projects/preppi/ci/ preppi
+ln -s ~/projects/bak/changlab/rna/u1u2/
+ln -s ~/projects/bak/changlab/rna/xist/
+ll 
+ll preppi/
+ll u1u2/
+ll xist/
+cd u1u2/
+ll 
+head u1u2.intm 
+head binding.txt 
+ll 
+wc -l binding.txt 
+tail binding.txt 
+ll 
+vi checkU1U2intm.pl 
+head binding.txt
+wc -l binding.txt 
+ll -h binding.txt 
+ll 
+cd ..
+ll 
+cd xist/
+ll 
+head data
+ll 
+head data.filtered 
+wc -l data data.filtered 
+ll
+cd ../u1u2/
+ll
+head u1u2.intm 
+wc -l u1u2.intm 
+tail u1u2.intm 
+ll 
+head preppi.high.tab 
+grep -i q99558 preppi.high.tab | grep p11309
+grep -i q99558 preppi.high.tab | grep -i p11309
+vi checkU1U2intm.pl 
+ll 
+grep -i q86u44 binding.txt 
+grep -i o75533 binding.txt 
+cd ci/u1u2/
+grep -i cstf binding.txt 
+grep Q12996 u1u2.intm | wc -l
+grep Q05048 u1u2.intm | wc -l
+grep P33240 u1u2.intm | wc -l
+grep -i abh5 binding.txt 
+grep q6p6c2 u1u2.intm 
+grep -i fto binding.txt 
+grep q9c0b1 u1u2.intm 
+grep q9c0b1 preppi.high.tab 
+grep -i q9c0b1 u1u2.intm 
+head binding.txt 
+ll 
+ssh wanglab
+ssh wanglab@171.65.8.252
+vi checkU1U2intm.pl 
+head -20 checkU1U2intm.pl 
+perl checkU1U2intm.pl binding.txt preppi.high.tab u1.intm
+vi checkU1U2intm.pl 
+perl checkU1U2intm.pl binding.txt preppi.high.tab u2.intm
+ll 
+head u1.intm 
+vi u1.intm 
+ll 
+vi knownU1U2BP.txt
+grep -v "^#" knownU1U2BP.txt | wc -l
+grep -v "^#" knownU1U2BP.txt 
+grep -v "^#" knownU1U2BP.txt | cut -f1
+head knownU1U2BP.txt 
+vi knownU1U2BP.txt 
+ll 
+head knownU1U2BP.txt 
+grep -i q08170 u1u2.intm | wc -l
+mkdir bak
+mv bak/ archive
+mv O*intm P*intm archive/
+ll 
+mv Q*intm q*intm archive/
+ll 
+mv q86u44.partners archive/
+ll 
+grep -i cstf binding.txt > cstf.list
+head cstf.list 
+qrsh -now n
+vi note
+ll
+cd ..
+ll 
+cd xist/
+ll
+ll 
+cat data
+wc -l data
+wc -l data.filtered 
+ssh changrila
+ll 
+wc -l xist.
+wc -l xist.intm 
+wc -l xist.all.intm 
+head mouseRBP.proteome.nr.list 
+ll 
+vi checkIntm.pl 
+head data.filtered 
+vi checkIntm.pl 
+ll
+ll ../u1u2/
+ll 
+head ../u1u2/preppi.high.tab 
+ll 
+ll ..
+ll 
+cd ..
+ll 
+ll preppi/
+head preppi/preppi_int.mouse.tab 
+cd xist/
+ln -s ../preppi/preppi_int.mouse.tab 
+ll 
+rm preppi_int.mouse.tab 
+ln -s ~/projects/bak/changlab/preppi/preppi_int.mouse.tab 
+ll 
+vi checkIntm.pl 
+vi checkRBP.pl 
+ll 
+ln -s ~/projects/bak/changlab/rna/rbp/
+ll 
+ll rbp/
+head rbp/all.proteome.list 
+wc -l rbp/all.proteome.list rbp/all.proteome.nr.list 
+ll 
+head rbp/all.proteome.list rbp/all.proteome.nr.list 
+rm rbp/
+rm rbp
+ln -s ~/projects/bak/changlab/rna/rbp/all.proteome.nr.list 
+ll 
+mv all.proteome.nr.list rbp.list
+ll 
+head mouseRBP.proteome.nr.list 
+wc -k mouseRBP.proteome.nr.list 
+wc -l mouseRBP.proteome.nr.list 
+ll 
+head myosin.partner
+tail myosin.partner
+ll 
+wc -l myosin.partner
+ll 
+cd ../preppi 
+ll
+head list.origin 
+grep -i q9dbr1 ../xist/data
+grep -i q9dbr1 ~/ci/xist/data
+grep -i q8vdw0 ~/ci/xist/data
+grep -i a2an61 ~/ci/xist/data
+grep -i p28659 ~/ci/xist/data
+grep -i q5dtm8 ~/ci/xist/data
+wc -l list.origin 
+ll 
+cd ci/u1u2/
+ll 
+head u1.intm 
+cat note 
+cat cstf.list 
+ll ../xist/
+cat ../xist/checkRBP.pl 
+ll 
+head knownU1U2BP.txt 
+grep -v "^#"knownU1U2BP.txt  | wc -l
+grep -v "^#" knownU1U2BP.txt  | wc -l
+head binding.txt 
+wc -l binding.txt 
+ll 
+cp checkU1U2intm.pl pathU1U2binder.pl
+ll 
+cd ci/u1u2/
+ll
+ll 
+head binding.txt 
+head knownU1U2BP.txt 
+head u1u2.intm 
+ll 
+vi checkU1U2intm.pl 
+ll 
+cd ~/sunny/cliff/
+ll 
+cd TSS/
+ll 
+cd CM/
+ll 
+cd fl8000/
+ll 
+head -2 RefSeqTSS.mm9.bivalent.R.txt
+ll -a
+module add r/3.0.1 
+R
+ll -a
+cat .Rhistory 
+cd sunny/cliff/TSS/
+ls
+cd CM/
+ls
+cd fl8000/
+ls
+ll -a
+vi .Rhistory 
+cd ~/ci/u1u2/
+ll 
+perl -c pathU1U2binder.pl 
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab xxx
+ll 
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab xxx
+ll 
+head xxx 
+vi xxx 
+grep "	0" xxx | wc -l
+grep "	1" xxx | wc -l
+grep "	2" xxx | wc -l
+grep "	NULL" xxx | wc -l
+grep "	NULL" xxx
+grep "	1" xxx | head
+grep Q01844 knownU1U2BP.txt 
+grep "	0" xxx | head
+grep -i q13838 knownU1U2BP.txt 
+ll 
+grep -i Q01844 preppi.high.tab | wc -l
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u2.shortestPath
+ll 
+rm xxx 
+vi u2.shortestPath 
+ll 
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u2.shortestPath
+ll 
+vi u2.shortestPath 
+wc -l u2.shortestPath 
+head u2.shortestPath 
+cut -d2 u2.shortestPath | sort | uniq -c
+cut -f2 u2.shortestPath | sort | uniq -c
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u1u2.shortestPath
+cut -f2 u12.shortestPath | sort | uniq -c
+cut -f2 u1u2.shortestPath | sort | uniq -c
+ll 
+vi pathU1U2binder.pl 
+ll 
+head binding.txt 
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u1u2.shortestPath
+cat u1u2.shortestPath 
+ll
+cut -f2 u1u2.shortestPath | sort | uniq -c
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u1u2.shortestPath
+cut -f2 u1u2.shortestPath | sort | uniq -c
+ll 
+grep -i q08170 binding.txt 
+cd ../../../correlation/
+grep -i q08170 u1u2.shortestPath 
+ls
+grep -i q08170 knownU1U2BP.txt 
+mkdir refseq-15
+cd refseq-15/
+mkdir liver-ESC
+cd liver-ESC/
+grep -i q08170 preppi.high.tab 
+pwd
+ll 
+grep -i q08170 preppi.high.tab | wc -l
+grep -i q08170 knownU1U2BP.txt 
+grep -i q08170 u1u2.shortestPath 
+grep -i q08170 binding.txt 
+grep -i q08170 binding.txt | cut -f5
+scp wanglab@171.8.65.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Correlation/liver-ESC/*.* ./
+grep -i q08170 binding.txt | cut -f3
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Correlation/liver-ESC/*.* ./
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u1u2.shortestPath
+grep -i q08170 u1u2.shortestPath 
+cut -f2 u1u2.shortestPath | sort | uniq -c
+ls
+vi pathU1U2binder.pl 
+vi knownU1U2BP.txt 
+cd sunny/cliff/correlation/refseq-15/liver-ESC/
+../../correlation.pl liver-ESC.all lncRNA-select.expression liver-ESC-lncrna.matrix &
+wc -l liver-ESC-lncrna.matrix 
+cp ../../refseq-14/MEF-ESC/test-3.pl ./
+vi xxx
+grep -v "^#" xxx | wc -l
+mv xxx knownU1U2BP.txt 
+vi test-3.pl 
+cp liver-ESC.all ooo
+wc -l liver-ESC-lncrna.matrix 
+vi ooo
+wc -l liver-ESC-lncrna.matrix 
+vi ooo
+cd ../
+mkdir esc-Liver
+vi knownU1U2BP.txt 
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/GENE-expression/Liver+ESC/esc-Liver/esc-Liver.gene ./
+ls
+mv esc-Liver.gene esc-Liver/
+cd liver-ESC/
+ls
+tail *.matrix
+cut -f1 knownU1U2BP.txt 
+ls
+clear
+cut -f1 knownU1U2BP.txt 
+wc -l *.matrix
+cut -f1 knownU1U2BP.txt | grep -v "^#" 
+./test-3.pl lncRNA-select.expression liver-ESC-lncrna.list &
+qrsh -now n
+cd sunny/cliff/
+ls
+cd correlation/refseq-15/
+ls
+cd liver-ESC/
+ls
+vi test-3.pl 
+vi lncRNA-select.expression 
+ls
+cd ..
+cd esc-Liver/
+ls
+../../correlation.pl esc-Liver.gene ../liver-ESC/lncRNA-select.expression esc-Liver-lncrna.matrix &
+vi esc-Liver-lncrna.matrix 
+cd ../liver-ESC/
+ls
+module add 3/3.0.1
+module add r/3.0.1
+vi knownU1U2BP.txt 
+clear
+cd sunny/cliff/correlation/
+vi R_note 
+cp refseq-15/liver-ESC/liver-ESC-lncrna.matrix refseq-15/liver-ESC/lncRNA.gene.corr
+cd refseq-15/liver-ESC/
+ls
+vi knownU1U2BP.txt 
+grep -i Q12874 knownU1U2BP.txt 
+R
+ls
+mv Rplots.pdf liver-ESC-lncrna.pdf
+vi knownU1U2BP.txt 
+less knownU1U2BP.txt 
+cut -b1 knownU1U2BP.txt | sort | uniq -c
+ll 
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u1u2.shortestPath
+cut -f2 u1u2.shortestPath | sort | uniq -c
+vi knownU1U2BP.txt 
+grep -v "^#" knownU1U2BP.txt  | wc -l
+grep -v "^#" knownU1U2BP.txt  | cut -f1
+grep -v "^#" knownU1U2BP.txt  | cut -f1 | sort | uniq -c
+grep -n Q96DI7 knownU1U2BP.txt 
+vi knownU1U2BP.ori.txt
+wc -l knownU1U2BP.*
+cd ../esc-Liver/
+grep WD40s knownU1U2BP.ori.txt 
+cp esc-Liver-lncrna.matrix lncRNA.gene.corr
+grep -n WD40s knownU1U2BP.ori.txt 
+vi ../../R_note 
+grep -n yes knownU1U2BP.txt 
+grep -n yes knownU1U2BP.txt | wc -l
+ll
+cut -f3 binding.txt > xxx
+vi xxx 
+vi pathU1U2binder.pl 
+vi .Rhistory 
+vi pathU1U2binder.pl 
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u1u2.shortestPath
+cut -f2 u1u2.shortestPath | sort | uniq -c
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u1u2.shortestPath
+cut -f2 u1u2.shortestPath | sort | uniq -c
+vi note
+cat note 
+ll 
+ll ../xist/
+ln -s ../xist/checkRBP.pl 
+ll 
+vi checkRBP.pl 
+cat checkRBP.pl 
+ll 
+R
+ls
+wc -l esc-Liver-lncrna.matrix 
+rm check
+rm checkRBP.pl 
+ll 
+head xxx 
+rm xxx 
+ll 
+cat cstf
+cat cstf.list 
+grep Q12996 preppi.high.tab > 111
+grep Q12996 preppi.high.tab > 222
+grep P33240 preppi.high.tab > 333
+R
+cat 111 222 333 | sort | uniq > cstf.intm
+mv Rplots.pdf esc-Liver-lncrna.pdf
+wc -l 111 222 333 cstf.
+wc -l 111 222 333 cstf.intm 
+ll 
+mv 111 cstf1.intm
+mv 222 cstf2.intm
+mv 333 cstf3.intm
+ll 
+head cstf.intm 
+wc -l cstf.intm 
+cat note 
+ll 
+head u1u2.intm
+head -30 checkU1U2intm.pl 
+perl checkU1U2intm.pl binding.txt cstf.intm u2.csts.intm
+perl checkU1U2intm.pl binding.txt cstf.intm u1u2.csts.intm
+perl checkU1U2intm.pl binding.txt cstf.intm u1.csts.intm
+ll 
+head u1.csts.intm 
+wc -l u1.csts.intm 
+vi u1.csts.intm 
+grep PPI u1.csts.intm | wc -l
+grep PPI u2.csts.intm | wc -l
+cd ../liver-ESC/
+ls
+head -100 lncRNA-select.expression > t1
+./test-3.pl t1 > t2 
+vi t2
+grep RPI u2.csts.intm | wc -l
+grep RPI u1.csts.intm | wc -l
+vi t1 
+vi t2
+head -40 pathU1U2binder.pl 
+vi t1 
+vi t2
+cd ../
+ls
+mkdir Gene-LncRNA
+cd Gene-LncRNA/
+ls
+less pathU1U2binder.pl 
+ll 
+diff u1.csts.intm 
+tail u1.csts.intm 
+tail u2.csts.intm 
+perl checkU1U2intm.pl binding.txt cstf.intm u1.csts.intm
+perl checkU1U2intm.pl binding.txt cstf.intm u2.csts.intm
+wc -l u1.csts.intm u2.csts.intm 
+grep RPI u2.csts.intm | wc -l
+grep RPI u1.csts.intm | wc -l
+grep PPI u1.csts.intm | wc -l
+grep PPI u2.csts.intm | wc -l
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/all-gene-expression/select-gene.expression ./
+ls
+perl checkU1U2intm.pl binding.txt cstf.intm u2.csts.intm
+perl checkU1U2intm.pl binding.txt cstf.intm u1.csts.intm
+grep PPI u1.csts.intm | wc -l
+grep PPI u2.csts.intm | wc -l
+perl checkU1U2intm.pl binding.txt cstf.intm u1.csts.intm
+../../correlation.pl select-gene.expression ../liver-ESC/lncRNA-select.expression  Gene-lncRNA.matrix &
+perl checkU1U2intm.pl binding.txt cstf.intm u2.csts.intm
+grep PPI u2.csts.intm | wc -l
+wc -l Gene-lncRNA.matrix 
+grep PPI u1.csts.intm | wc -l
+head Gene-lncRNA.matrix 
+perl checkU1U2intm.pl binding.txt cstf.intm u2.csts.intm
+perl checkU1U2intm.pl binding.txt cstf.intm u1.csts.intm
+grep PPI u1.csts.intm | wc -l
+grep PPI u2.csts.intm | wc -l
+ls
+wc -l Gene-lncRNA.matrix 
+vi checkU1U2intm.pl 
+ll 
+vi pathU1U2binder.pl 
+ls
+vi t2 
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab u1u2.shortestPath
+less pathU1U2binder.pl 
+cat note 
+vi t1
+cut -f2 u1u2.shortestPath | sort | uniq -c
+vi t2 
+vi test-3.pl 
+./test-3.pl t1 > t2
+vi t2
+cd sunny/cliff/correlation/refseq-15/liver-ESC/
+ls
+./test-3.pl lncRNA-select.expression > liver-ESC-lncrna.list &
+rm t1 t2
+cat note 
+ls
+wc -l *.list
+vi liver-ESC-lncrna.list 
+grep cstf
+cat cstf.list 
+ll 
+grep -i q12996 knownU1U2BP.txt 
+grep -i q05048 knownU1U2BP.txt 
+vi ../../correlation_list.pl 
+grep -i p33240 knownU1U2BP.txt 
+../../correlation_list.pl liver-ESC-lncrna.list liver-ESC-lncrna.dat &
+wc -l *.dat
+head *.dat
+tail *.dat
+grep -i q12996 binding.txt 
+ll 
+wc -l cstf.intm 
+grep PPI u1u2.csts.intm | wc -l
+grep PPI u1u2.csts.intm | head
+head cstf.intm
+grep Q6NXG1 cstf.intm 
+ll 
+cat cstf.list 
+wc -l u1u2.csts.intm 
+wc -l *.dat
+vi checkU1U2intm.pl 
+wc -l *.list
+wc -l *.dat
+ls
+cd ../esc-Liver/
+ls
+cp esc-Liver.gene ooo
+mv u1u2.csts.intm u1u2.cstf.intm
+mv u2.csts.intm u2.cstf.intm
+../liver-ESC/test-3.pl ../liver-ESC/lncRNA-select.expression > esc-Liver-lncrna.list &
+ls
+mv u1.csts.intm u1.cstf.intm
+vi esc-Liver-lncrna.list 
+../../correlation_list.pl esc-Liver-lncrna.list esc-Liver-lncrna.dat &
+tail *.dat
+cat cstf.list 
+vi *.dat
+cd ../../refseq-14/
+ls
+cd MEF-ESC/
+ls
+vi Sox-lncrna-expression.txt 
+ll 
+grep PPI u1.cstf.intm | wc -l
+grep PPI u2.cstf.intm | wc -l
+grep PPI u2u1.cstf.intm | wc -l
+grep PPI u1u2.cstf.intm | wc -l
+grep PPI u1u2.cstf.intm | head
+grep PPI u1.cstf.intm | head
+grep -i p52756 u1.cstf.intm 
+grep -i p52756 u2.cstf.intm 
+cd sunny/cliff/
+ls
+cd correlation/refseq-14/
+ls
+cd MEF-ESC/
+ls
+ls *.csv
+vi Sox-lncrna-expression-2.csv 
+vi Sox-lncrna.csv 
+vi Sox-lncrna-expression-2.csv 
+vi Sox-lncrna-3.csv
+vi .Rhistory 
+cd sunny/cliff/correlation/refseq-14/MEF-ESC/
+module add r/3.0.1
+R
+mv Rplots.pdf Sox-lncrna-3.pdf
+ls
+head binding.txt 
+vi Sox-lncrna-3.csv 
+cat cstf.list 
+grep -i q05048 u1u2.cstf.intm 
+grep -i q12996 u1u2.cstf.intm 
+R
+ls
+mv Rplots.pdf Sox-lncrna-4.pdf
+head binding.txt | cut -f4
+vi Sox-lncrna-3.csv 
+tail -1 Sox-lncrna-3.csv > t11
+vi t11
+head -1 Sox-lncrna-3.csv > Sox-lncrna-4.csv
+head u1u2.cstf.intm 
+cat t11 >> Sox-lncrna-4.csv 
+vi Sox-lncrna-4.csv 
+tail -39 Sox-lncrna-3.csv >> Sox-lncrna-4.csv 
+vi Sox-lncrna-4.csv 
+R
+mv Rplots.pdf Sox-lncrna-4.pdf
+tail u1u2.cstf.intm 
+vi t11
+cat t11 >> Sox-lncrna-4.csv 
+vi checkU1U2intm.pl 
+vi Sox-lncrna-4.csv 
+perl -c checkU1U2intm.pl 
+head checkU1U2intm.pl 
+perl checkU1U2intm.pl binding.txt cstf.intm u1u2.cstf.intm 
+ll 
+head u1u2.cstf.intm 
+R
+mv Rplots.pdf Sox-lncrna-4.pdf
+ll 
+grep P33240 u1u2.cstf.intm 
+vi hand1-lncrna-2.cvs
+vi hand1-lncrna-2.csv
+R
+mv Rplots.pdf hand1-lncrna-2.pdf
+vi checkU1U2intm.pl 
+perl checkU1U2intm.pl binding.txt cstf.intm u1u2.cstf.intm 
+vi checkU1U2intm.pl 
+perl checkU1U2intm.pl binding.txt cstf.intm u1u2.cstf.intm 
+ls
+ls *.pdf
+mkdir pic
+cd pic
+ls
+mv ../Sox-lncrna-4.csv ./
+vi Sox-lncrna-4.csv 
+cd sunny/cliff/correlation/refseq-14/
+ls
+cd MEF-ESC/
+ls
+R
+mv Rplots.pdf Sox-lncrna-4.pdf
+vi u1u2.cstf.intm 
+head checkU1U2intm.pl 
+vi checkU1U2intm.pl 
+mv ../hand1-lncrna-2.csv ./
+rm ../hand1-lncrna-2.pdf 
+R
+mv Rplots.pdf hand1-lncrna-2.pdf
+vi .Rhistory 
+ll
+cat note 
+ll 
+head binding.txt 
+cat cstf.list 
+ll 
+cd ..
+ll 
+cd ..
+ll 
+cd work/genomeAlignment/
+ll 
+cd nm1_pan2/
+ll 
+head net/
+cd n
+cd net/
+ll 
+hed nomLeu1.panTro2.all.pre.chain 
+head nomLeu1.panTro2.all.pre.chain 
+head -100000 nomLeu1.panTro2.all.pre.chain > xxx
+sort xxx | uniq -c > yyy
+ll 
+head yyy 
+vi nomLeu1.panTro2.all.pre.chain 
+ll 
+rm xxx yyy 
+ll 
+head nomLeu1.panTro2.all.pre.chain 
+screen -r
+exit
+exit
+screen -r 25793.pts-22.scg3-ln01
+screen -r
+chainNet all.pre.chain -minSpace=1 ci2.sizes cs2.sizes stdout /dev/null | netSyntenic stdin noClass.net
+ll ~/work/genomeAlignment/nm1_pan2/net/
+chainNet nomLeu1.panTro2.all.pre.chain -minSpace=1 ../fasta/nomLeu1.UCSC.01_05_13.sizes ../fasta/panTro2.UCSC.12_18_12.sizes stdout /dev/null | netSyntenic stdin noClass.net 1> log 2> err
+cd ~/work/genomeAlignment/nm1_pan2/net/
+ll 
+ll -h
+head noClass.net 
+ll 
+mv noClass.net nomLeu1.panTro2.noClass.net
+ll 
+netClass
+ll 
+ll -h
+ll ~/lib/liftover/
+ll ~/lib/liftover/ -h
+ll -h
+head nomLeu1.panTro2.all.pre.chain
+head ~/lib/liftover/hg19ToNomLeu1.over.chain 
+grep chain ~/lib/liftover/hg19ToNomLeu1.over.chain | wc -l
+grep chain nomLeu1.panTro2.all.pre.chain | wc -l
+grep chain ~/lib/liftover/rheMac2ToPonAbe2.over.chain | wc -l
+ll 
+cat err 
+rm err 
+ll 
+rm log 
+ll 
+screen -r 26654.pts-148.scg3-ln01
+l 
+ll 
+cd ~/usr/
+cd ucsc/
+ll
+cd ..
+ll 
+cd ..
+ll
+vi doChainning.pl 
+ll 
+vi doLastz.pl 
+vi checkLastz.pl 
+grep gzip *.pl
+vi doLastz.pl 
+cat chainJobs.sh 
+grep psl *
+grep sed *
+ll 
+cat doChainning.pl 
+ll 
+cat chainJobs.sh 
+mv chainJobs.sh postChainJobs.sh
+ll nm1_pan2/
+ll nm1_pan2/net/
+ll 
+cat postChainJobs.sh 
+screen  -r
+;q
+screen -r 26654.pts-148.scg3-ln01
+history | tail -100 >> cmd
+vi cmd 
+ll 
+cat cmd 
+vi cmd
+ll 
+history | grep "perl doChaining.pl" > xxx
+vi xxx 
+history | grep "perl doChainning.pl" > xxx
+vi xxx 
+rm xxx 
+vi cmd
+history | grep "perl doChainning.pl" >> cmd
+rm x
+rm xxx
+ll 
+vi cmd
+vi doBlastzChainNet_test.pl 
+history > xxx
+vi xxx 
+rm xxx 
+ll 
+ll ~/ -a
+vi ~/.bash_history -a
+vi ~/.bash_history
+ll 
+ll 
+cat cmd
+screen -r 26654.pts-148.scg3-ln01
+vi cmd
+ll 
+cat cmd
+ll 
+screen -r 26654.pts-148.scg3-ln01
+ll 
+netChainSubset -verbose=0 nomLeu1.panTro2.noClass.net nomLeu1.panTro2.all.chain stdout | chainStitchId stdin nomLeu1.panTro2.all.over.chain
+vi cmd
+ll 
+screen -r 26654.pts-148.scg3-ln01
+cd work/genomeAlignment/
+ll 
+cd nm1_pan2/
+vi cmd
+ll 
+cd ..
+vi cmd
+cat cmd
+cd net
+cd nm1_pan2/net/
+ll 
+mv nomLeu1.panTro2.all.pre.chain .nomLeu1.panTro2.all.pre.chain 
+ll 
+head nomLeu1.panTro2.all.over.chain 
+grep chain nomLeu1.panTro2.all.over.chain | wc -l
+ll 
+vi doBlastzChainNet_test.pl 
+ll 
+liftover
+liftOver
+ll 
+cd ~/
+ll 
+cd ncRNAhomo/
+ll
+cd synteny/
+ll
+ll liftover
+ll liftover/
+head liftover/dm3ToAnoGam1.over.chain 
+ll 
+ll rox/
+ll rox/rox.gtf
+head rox/rox.gtf
+cat runLiftOver.pl 
+ll 
+liftOver
+cd ~/ncRNAhomo/synteny/
+ll
+mv liftover_results/ liftover_results_one/
+ll 
+perl runLiftOver.pl ~/ncRNAhomo/synteny/rox/rox.gtf ~/lib/ucsc/liftover/ dm3
+ll 
+liftOver /home/qczhang/ncRNAhomo/synteny/rox/rox.gtf /home/qczhang/lib/ucsc/liftover/dm3ToDroEre2.over.chain rox.dm3ToDroEre2.gtf rox.dm3ToDroEre2.unmapped -gff -minMatch=0.1 -multiple=Y
+liftOver /home/qczhang/ncRNAhomo/synteny/rox/rox.gtf /home/qczhang/lib/ucsc/liftover/dm3ToDroEre2.over.chain rox.dm3ToDroEre2.gtf rox.dm3ToDroEre2.unmapped -gff -minMatch=0.1 -multiple=y
+liftOver /home/qczhang/ncRNAhomo/synteny/rox/rox.gtf /home/qczhang/lib/ucsc/liftover/dm3ToDroEre2.over.chain rox.dm3ToDroEre2.gtf rox.dm3ToDroEre2.unmapped -gff -minMatch=0.1 -multiple=1
+liftOver /home/qczhang/ncRNAhomo/synteny/rox/rox.gtf /home/qczhang/lib/ucsc/liftover/dm3ToDroEre2.over.chain rox.dm3ToDroEre2.gtf rox.dm3ToDroEre2.unmapped -gff -minMatch=0.1 -multiple="Y"
+liftOver /home/qczhang/ncRNAhomo/synteny/rox/rox.gtf /home/qczhang/lib/ucsc/liftover/dm3ToDroEre2.over.chain rox.dm3ToDroEre2.gtf rox.dm3ToDroEre2.unmapped -gff -minMatch=0.1 -multiple=Yes
+liftOver /home/qczhang/ncRNAhomo/synteny/rox/rox.gtf /home/qczhang/lib/ucsc/liftover/dm3ToDroEre2.over.chain rox.dm3ToDroEre2.gtf rox.dm3ToDroEre2.unmapped -gff -minMatch=0.1 -multiple=yes
+vi runLiftOver.pl 
+find ~/usr/software/ucsc_tools/kent/src/ -name "liftOver*" -print
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/doc/liftOver.txt
+ll /home/qczhang/usr/software/ucsc_tools/kent/src/hg/inc/liftOver.h
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/inc/liftOver.h
+find ~/usr/software/ucsc_tools/kent/src/ -name "liftOver*" -print | xargs grep -i multiple
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/liftOver/liftOver.c
+liftOver /home/qczhang/ncRNAhomo/synteny/rox/rox.gtf /home/qczhang/lib/ucsc/liftover/dm3ToDroEre2.over.chain rox.dm3ToDroEre2.gtf rox.dm3ToDroEre2.unmapped -gff -minMatch=0.1 -multiple
+ll 
+cat rox.dm3ToDroEre2.gtf 
+ll 
+ll rox.*
+rm rox.*
+ll 
+vi runLiftOver.pl 
+ll 
+ll 
+ll liftover_results_one/
+ll 
+history | grep runLiftOver.pl > xxx
+vi xxx 
+rm xxx 
+ll 
+perl runLiftOver.pl rox/rox.roX1.nbr.gtf liftover/ dm3 
+vi runLiftOver.pl 
+ll 
+mkdir liftover_results
+mv rox.roX1.nbr.dm3To* liftover_results
+ll
+ll liftover_results/
+ll 
+ll liftover_results_one/*roX1*
+liftOver
+ll 
+exit
+exit
+qrsh -now n
+exit
+qrsh -now n
+liftOver
+ll 
+cd work/genomeAlignment/
+ll
+cat doChainning.pl 
+axtChain
+liftOver
+ll 
+ll ~/test
+ll ~/test/
+ll ~/test/forLiftOver.bed 
+cat ~/test/forLiftOver.bed 
+vi ~/test/forLiftOver2.bed 
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped
+cat ~/test/out1.bed
+cat ~/test/out1.unmapped 
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minRatio=0.1
+liftOver
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1
+cat ~/test/out1.unmapped 
+cat ~/test/out1.bed
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1 -multiple
+cat ~/test/out1.unmapped 
+cat ~/test/out1.bed
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1 -multiple -minChainT=100 -minChainQ=100
+cat ~/test/out1.bed
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1 -multiple -minChainT=1000 -minChainQ=1000
+cat ~/test/out1.bed
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1 -multiple -minChainT=1000 -minChainQ=1000 -minSizeQ=6000
+cat ~/test/out1.bed
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1 -multiple -minChainT=1000 -minChainQ=1000 -minSizeQ=7000
+cat ~/test/out1.bed
+clear
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped
+cat ~/test/out1.bed
+cat ~/test/out1.unmapped 
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1
+cat ~/test/out1.bed
+cat ~/test/out1.unmapped 
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1 -multiple
+cat ~/test/out1.bed
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1 -multiple -minChainT=100 -minChainQ=100
+cat ~/test/out1.bed
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -minMatch=0.1 -multiple -minChainT=1000 -minChainQ=1000
+cat ~/test/out1.bed
+clear
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped
+cat ~/test/out1.bed
+cat ~/test/out1.unmapped 
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped -multiple
+cat ~/test/out1.unmapped 
+clear
+liftOver ~/test/forLiftOver2.bed ~/lib/liftover/hg19ToMm9.over.chain ~/test/out1.bed ~/test/out1.unmapped
+netToAxt
+ll 
+cat postChainJobs.sh 
+cat cmd
+ll 
+cd nm1_pan2/
+ll 
+head target.list 
+tail target.list 
+head nomLeu1.UCSC.01_05_13.lst 
+tail nomLeu1.UCSC.01_05_13.lst 
+ll 
+ll qParts/
+cat qParts/part000.lst 
+cat qParts/part007.lst 
+ll 
+cat ../doLastz.pl 
+cd sunny/cliff/
+ls
+cd correlation/refseq-15/esc-Liver/
+ls
+vi .Rhistory 
+ll 
+cd ..
+ll 
+ll nm1_pan2/
+cd nm1_pan2/
+ll
+cd net/
+ll 
+mv nomLeu1.panTro2.all.over.chain nomLeu1ToPanTro2.over.chain 
+mv nomLeu1ToPanTro2.over.chain ~/lib/liftover/
+ln -s ~/lib/liftover/nomLeu1ToPanTro2.over.chain 
+ll
+cd ..
+ll 
+cd ../
+ll 
+cat cmd
+ll 
+cd work/genomeAlignment/
+ll nm1_pan2/
+ll nm1_pan2/raw/
+which partitionSequence.pl
+partitionSequence.pl
+ll 
+ll nm1_pan2/
+head nm1_pan2/nomLeu1.UCSC.01_05_13.lst 
+tail nm1_pan2/nomLeu1.UCSC.01_05_13.lst 
+vi ~/usr/software/ucsc_tools/kent/src/hg/utils/automation/partitionSequence.pl
+ll 
+cd work/genomeAlignment/
+ll
+cd nm1_pan2/
+head nomLeu1.UCSC.01_05_13.lst 
+tail nomLeu1.UCSC.01_05_13.lst 
+ll /home/qczhang/lib/bowtie-lib/fasta/nomLeu1.UCSC.01_05_13.2bit
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+faSize
+ll /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+ll 
+ll ..
+ll ../
+ll logs
+ll ../logs
+ll 
+ll ~/
+ll ~/work/
+ll ~/work/liftover/
+ll ~/work/liftover/psl/
+ll ~/work/liftover/
+ll ~/work/liftover/psl/
+ll 
+tail nomLeu1.UCSC.01_05_13.lst 
+head panTro2.UCSC.12_18_12.lst 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc 
+ll 
+cd ../test
+mkdir ../test
+cd ../test
+cp ../nm1_pan2/nomLeu1.UCSC.01_05_13.lst ../nm1_pan2/panTro2.UCSC.12_18_12.lst ./
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc 
+touch DEF
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc nomLeu1.UCSC.01_05_13.lst panTro2.UCSC.12_18_12.lst DEF xxx
+vi ~/usr/ucsc/doBlastzChainNet_test.pl 
+ll 
+cd test/
+ll 
+ll ../nm1_pan2/
+ll ../nm1_pan2/fasta/
+ll /home/qczhang/lib/fasta/
+ll /home/qczhang/lib/fasta/nomLeu1.UCSC.01_05_13.2bit
+ll 
+cat ../doLastz.pl 
+mkdir tmp
+ll 
+which lastz
+ll ~/bin/
+ll ~/bin/lastz/
+ll /usr/local/bin
+vi DEF
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc nomLeu1.UCSC.01_05_13.lst panTro2.UCSC.12_18_12.lst DEF xxx
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst panTro2.UCSC.12_18_12.lst DEF xxx
+cp -r ../nm1_pan2/tParts/ ./
+cp -r ../nm1_pan2/qParts/ ./
+ll
+ll t
+ll tParts/
+ll 
+ll ../nm1_pan2/
+ll ../nm1_pan2/test/
+ll ../nm1_pan2/test/chain/
+ll ../nm1_pan2/test/chain_shell/
+ll 
+head panTro2.UCSC.12_18_12.lst 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst /home/qczhang/lib/bowtie-lib/fasta/panTro2.UCSC.12_18_12.2bit:chr4:0-100000000 DEF xxx
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst /home/qczhang/lib/bowtie-lib/fasta/panTro2.UCSC.12_18_12.2bit:chr4:0-100000000 DEF xxx 1> log
+ll 
+wc -l log 
+head log 
+wc -l tParts/part065.lst
+head tParts/part065.lst
+ll 
+ll tmp/
+ll tmp/blastz.mEFnQ2/
+rm -r tmp/blastz.*
+ll 
+ll tmp/
+vi ~/usr/software/ucsc_tools/kent/src/hg/utils/automation/
+vi ~/usr/software/ucsc_tools/kent/src/hg/utils/automation/HgAutomate.pm 
+ll ~/usr/software/ucsc_tools/kent/src/hg/utils/automation/HgAutomate.pm 
+vi ~/usr/software/ucsc_tools/kent/src/hg/utils/automation/HgAutomate.pm 
+which gensub2
+cd ../../
+ls
+cd ../rna_seq/
+ls
+cd PGC-rna/
+ls
+pwd
+vi ~/usr/software/ucsc_tools/kent/src/hg/utils/automation/HgAutomate.pm 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst /home/qczhang/lib/bowtie-lib/fasta/panTro2.UCSC.12_18_12.2bit:chr4:0-100000000 DEF xxx 1> log
+ll 
+head log 
+tail log 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst /home/qczhang/lib/bowtie-lib/fasta/panTro2.UCSC.12_18_12.2bit:chr4:0-100000000 DEF xxx 1> log
+ll 
+head log 
+ll 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst /home/qczhang/lib/bowtie-lib/fasta/panTro2.UCSC.12_18_12.2bit:chr4:0-100000000 DEF xxx 1> log
+ll 
+cat log 
+which nibSize
+ll 
+ll qParts/
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll 
+lltmp
+ll tmp/
+ll tmp/blastz.ZIyIrR/
+vi tmp/blastz.ZIyIrR/bigCollapse.fa 
+grep "^>" tmp/blastz.ZIyIrR/bigCollapse.fa 
+grep -n "^>" tmp/blastz.ZIyIrR/bigCollapse.fa 
+cat qParts/part007.lst 
+vi
+vi tmp/blastz.ZIyIrR/bigCollapse.fa
+ll 
+rm -r tmp/blastz.*
+ll 
+cat log 
+rm log 
+ll
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll 
+cat log 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+export PATH=$PATH
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+cat log 
+rm -r tmp/blastz.*
+vi ~/usr/ucsc/doBlastzChainNet_test.pl 
+exit
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+cat log 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+cat log 
+echo $PATH
+vi DEF
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll
+ll tmp/
+cat log 
+rm -r tmp/blastz.*
+ll 
+cat log 
+head tParts/part065.lst
+head qParts/part007.lst
+mktemp 
+ll 
+mktemp -h
+mktemp --help
+nibFrag
+ll
+ll tmp/
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll 
+cat log 
+ll tmp/
+ll tmp/blastz.54MU6f/
+ll tmp/
+rm -r tmp/blastz.54MU6f/
+ll
+cat log 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll 
+ll tmp/
+export PATH=/usr/bin:/bin:/usr/local/bin:/home/qczhang/bin/lastz:/srv/gs1/software/ucsc_tools/2.7.2/bin/x86_64:/srv/gs1/software/ucsc_tools/2.7.2/bin:/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation:/cluster/bin/x86_64:/bin:/usr/bin;
+lastz /home/qczhang/work/genomeAlignment/test/tmp//blastz.Co5Shw/t.ADFV01155533.0.3700.fa[1,3700] /home/qczhang/work/genomeAlignment/test/tmp//blastz.Co5Shw/bigCollapse.fa  M=400 H=2000  > /home/qczhang/work/genomeAlignment/test/tmp//blastz.Co5Shw/little.raw
+sh -c
+sh --help
+ll 
+ll tmp/
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll 
+ll tmp/
+ll tmp/blastz.AgdePl/
+lastz /home/qczhang/work/genomeAlignment/test/tmp//blastz.AgdePl/t.ADFV01155533.0.3700.fa[1,3700] /home/qczhang/work/genomeAlignment/test/tmp//blastz.AgdePl/bigCollapse.fa  M=400 H=2000  > /home/qczhang/work/genomeAlignment/test/tmp//blastz.AgdePl/little.raw
+ll 
+cd work/genomeAlignment/
+ll
+cat doLastz.pl 
+ll tmp/blastz.AgdePl/
+ll tmp/
+lastz /home/qczhang/work/genomeAlignment/test/tmp//blastz.AgdePl/t.ADFV01155533.0.3700.fa[1,3700] /home/qczhang/work/genomeAlignment/test/tmp//blastz.AgdePl/bigCollapse.fa B=0 C=0 E=150 H=0 K=4500 L=1000 M=254 O=600 T=2 Y=15000 > /home/qczhang/work/genomeAlignment/test/tmp//blastz.AgdePl/little.raw
+ll 
+ll tmp/
+ll tmp/blastz.AgdePl/
+cat tmp/blastz.AgdePl/little.raw 
+which blast
+ll 
+ll
+vi ~/usr/
+ll ~/usr/
+ll ~/usr/scripts/
+ll ~/usr/scripts/blast_plot.py
+vi ~/usr/scripts/blast_plot.py
+cd ~/usr/scripts/
+ll 
+git clone http://github.com/tanghaibao/quota-alignment.git
+ll 
+rm blast_plot.py 
+ll 
+cd quota-alignment/
+l 
+cd ..
+ll 
+cd quota-alignment/
+ll 
+cd scripts/
+ll 
+cat blast_plot.py 
+ll 
+cd ..
+ll 
+cat README.rst 
+ll 
+which git
+cat run.sh 
+ll 
+ll data/
+ll exp/
+ll data/athaliana_lyrata.qa 
+head data/athaliana_lyrata.qa 
+ll 
+cd scripts/
+ll 
+vi blast_plot.py 
+./blast_plot.py 
+ll ~/lib/
+ll ~/lib/pythonlib/
+cd ~/lib/pythonlib/
+ll 
+python
+module available
+which python
+module add python/2.7 
+which python
+python
+cd -
+ll 
+./blast_plot.py 
+head -30 blast_plot.py 
+module available
+ssh wanglab@171.65.8.252
+ll 
+ll 
+vi note
+ll 
+cd ..
+ll 
+cd ~/usr/scripts/
+ll
+cd quota-alignment/
+ll 
+grep Bed *.py
+grep Bed scripts/*.py
+cd scripts/
+ll 
+vi bed_utils.py
+ll 
+cat README.rst 
+ll ../data/
+ehad ../data/maize_sorghum.raw 
+head ../data/maize_sorghum.raw 
+ll ../exp/
+ll ../exp/e
+ll ../exp/real/
+ll ../exp/simulation/
+cat ../exp/simulation/batch_run.py 
+ll
+./qa_plot.py 
+vi blast_plot.py 
+./qa_to_pairs.py 
+./qa_plot.py 
+ll 
+./blast_plot.py 
+ll 
+cd 
+cd lib/fasta/
+ll 
+cd flies/
+ll 
+ssh c2b2
+scp droAna3.fa droMel3.fa c2b2:~/test/
+head droAna3.fa droMel3.fa 
+ll 
+head droPse4.fa
+scp droPse4.fa c2b2:~/test/
+exit
+screen
+ll 
+ssh c2b2
+cd sunny/cliff/correlation/
+ls
+mkdir State
+cd State/
+mkdir esc-Liver
+cd esc-Liver/
+scp wanglab@171.65.8.252: /Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/LncRNA-stat/LncRNA.state ./
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/LncRNA-stat/LncRNA.state ./
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/LncRNA-stat/esc-Liver.state ./
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/LncRNA-state/esc-Liver.state ./
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/LncRNA-stat/LncRNA.state ./
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/LncRNA-state/LncRNA.state ./
+ls
+cd sunny/cliff/correlation/State/esc-Liver/
+../../correlation.pl esc-Liver.state LncRNA.state esc-Liver-lncrna.matrix &
+vi *.matrix
+vi LncRNA.state 
+vi esc-Liver
+vi esc-Liver.state 
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/LncRNA-state/esc-liver-lnc.state ./
+ls
+../../correlation.pl esc-Liver.state esc-liver-lnc.state esc-Liver-lncrna.matrix &
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/LncRNA-state/esc-liver-lnc.state ./
+../../correlation.pl esc-Liver.state esc-liver-lnc.state esc-Liver-lncrna.matrix &
+vi esc-Liver-lncrna.matrix 
+cp ../../refseq-14/MEF-ESC/test-3.pl ./
+vi test-3.pl 
+cp esc-Liver.state ooo
+./test-3.pl esc-liver-lnc.state > esc-Liver.list &
+vi test-3.pl 
+./test-3.pl esc-liver-lnc.state > esc-Liver.list &
+vi esc-Liver.list 
+cp ../../correlation_list.pl ./
+vi correlation_list.pl 
+./correlation_list.pl esc-Liver.list esc-Liver.dat &
+ls
+vi esc-Liver-lncrna.matrix 
+vi esc-Liver.dat 
+ls
+cp ../../src/select.pl ./
+vi select.pl 
+cp ../../src/read.pl ./
+vi read.pl 
+./read.pl esc-Liver.dat > t3
+vi t3
+vi read.pl 
+./read.pl esc-Liver.dat > t3
+vi read.pl 
+./read.pl esc-Liver.dat > t3
+vi t3 
+vi esc-Liver.dat 
+vi read.pl 
+./read.pl esc-Liver.dat > t3
+vi t3
+vi read.pl 
+./read.pl esc-Liver.dat > t3
+vi t3
+cp read.pl tmp.pl
+vi tmp.pl 
+./tmp.pl t3 > t4
+vi t4
+../../../../work/Chip-seq/Mouse-ESC-GSE47949/deletmutipl-2.pl t4 > t5
+vi t5
+mv t5 positive-esc-Liver.lnc
+exit
+qrsh -now n
+exit
+ll 
+cd ci/
+ll
+cd ..
+mv ci chu
+ll 
+cd 
+ll 
+ll ../ci
+ll 
+mv ci chu
+ll 
+cd chu/
+ll 
+cd u1
+cd u1u2/
+ll 
+cat note 
+ll 
+vi pathU1U2binder.pl 
+ssh c2b2
+screen -r
+screen -r 26654.pts-148.scg3-ln01
+screen -r 4968.pts-45.scg3-ln01
+screen -r 20354.pts-125.scg3-ln01
+cd sunny/
+ls
+cd cliff/correlation/
+ls
+cd State/
+ls
+mkdir esc-Heart
+cd esc-l
+cd esc-Liver/
+ls
+vi select.pl 
+vi tmp.pl 
+vi read.pl 
+./read.pl esc-Liver.dat > t5
+vi t5
+vi read.pl 
+./read.pl esc-Liver.dat > t5
+vi t5
+./tmp.pl t5 > t6
+vi t6
+../../../../work/Chip-seq/Mouse-ESC-GSE47949/deletmutipl-2.pl t6 > t7
+vi t7
+mv t7 negative-esc-Liver.lnc 
+rm t6 t5 t3 
+ls
+rm t4
+vi positive-esc-Liver.lnc 
+vi negative-esc-Liver.lnc 
+vi LncRNA.state 
+./read.pl esc-Liver.dat > t5
+vi t5 
+vi LncRNA.state 
+vi esc-Liver.state 
+vi esc-liver-lnc.state 
+vi negative-esc-Liver.lnc 
+ls
+cp ../../../../work/Chip-seq/Mouse-ESC-GSE47949/mm9-enrich05/pick.pl ./
+vi pick.pl 
+cp esc-liver-lnc.state ooo
+./pick.pl negative-esc-Liver.lnc > negative-esc-Liver.state
+vi negative-esc-Liver.state 
+pwd
+ls
+cd work/
+ll 
+cd 
+cd usr/
+ll
+cd scripts/
+ll 
+cd quota-alignment/
+mv quota_align.cd ..
+cd ..
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/all-LncRNA-expression/lncRNA-select.expression ./
+ls
+vi pick.pl 
+vi read.pl 
+cp pick.pl pick-2.pl 
+vi pick-2.pl 
+cp lncRNA-select.expression ooo
+./pick-2.pl positive-esc-Liver.lnc > positive-esc-Liver.expression
+vi positive-esc-Liver.expression 
+./pick-2.pl negative-esc-Liver.lnc > negative-esc-Liver.expression
+vi negative-esc-Liver.expression 
+vi lncRNA-select.expression 
+ls
+cd sunny/cliff/correlation/State/esc-Liver/
+ls
+vi ../../refseq-15/Gene-LncRNA/select-gene.expression 
+scp wanglab@171.65.8.252:/Volumes/MacintoshHD2/mdong/work/Bivalent/Analysis/all-gene-expression/select-gene.expression ./
+vi select-gene.expression 
+../../correlation.pl select-gene.expression positive-esc-Liver.expression esc-liver-lnc-gene.positive.matrix &
+wc -l esc-liver-lnc-gene.positive.matrix 
+vi positive-esc-Liver.lnc 
+wc -l esc-liver-lnc-gene.positive.matrix 
+head esc-liver-lnc-gene.positive.matrix 
+:q
+ls
+vi test-3.pl 
+cp ../../refseq-15/liver-ESC/test-3.pl ./test-4.pl 
+vi test-4.pl 
+cp select-gene.expression ooo
+./test-4.pl positive-esc-Liver.expression > esc-liver-lnc-gene.positive.list &
+ll
+ll 
+mv quota-alignment/ ../software/
+ll 
+cd rna-seq/
+ll
+ls
+wc -l esc-liver-lnc-gene.positive.matrix 
+cat gpl.txt 
+ll 
+vi esc-liver-lnc-gene.positive.matrix 
+ll lac
+vi ooo
+ll macosx/
+ll macosx/Scripts\ for\ SFG/
+ll macosx/Scripts\ for\ SFG/EigenSoft/
+ll 
+cat SNP_detection.sh 
+vi esc-liver-lnc-gene.positive.list 
+ll 
+vi BlastParse.pl 
+ll 
+cat parse_blast.py 
+ll 
+cat merge_files.py 
+ll 
+vi ../../correlation_list.pl 
+cd ..
+lll 
+ll 
+mv rna-seq/ ../software/
+ll 
+ll archive/
+cd archive/
+../../correlation_list.pl esc-liver-lnc-gene.positive.list esc-liver-lnc-gene.positive.dat &
+ll 
+unzip Scripts.zip 
+ll 
+ll ..
+ll 
+ll __MACOSX/
+ll __MACOSX/Scripts\ for\ SFG/
+ll __MACOSX/Scripts\ for\ SFG/EigenSoft/
+ll 
+ll Scripts
+ll Scripts\ for\ SFG/
+ll 
+rm __MACOSX/
+rm -r __MACOSX/
+ll 
+rm -r Scripts\ for\ SFG/
+ll 
+ll
+cd ..
+ll 
+ll ../software/
+mv archive/ ../software/rna-seq/
+ll 
+cd ..
+ll 
+ll software/
+cd software/
+ll 
+cd rna-seq/
+ll 
+cd ..
+ll 
+cd quota-alignment/
+ll
+ll 
+cd scripts/
+ll 
+./blast_plot.py 
+cd 
+cd usr/software/quota-alignment/
+ll 
+cd scripts/
+ll 
+./blast_plot.py 
+module add python/2.7 
+./blast_plot.py 
+cd ~/work/
+ll 
+cd genomeAlignment/
+ll 
+mkdir dotplot
+cd dotplot/
+scp c2b2:~/scratch/*out ./
+ll 
+head dm3chr2.dp4chr2.out 
+~/usr/software/quota-alignment/scripts/blast_plot.py 
+cd ~/work/genomeAlignment/
+cd do
+cd dotplot/
+ll 
+head dm3chr2.dp4chr2.out 
+echo "chr2L	1	1000000	test1" >> q.bed
+echo "chr2	1	1000000	dp4" >> t.bed
+echo "chr2L	1	1000000	dm3" > q.bed
+mv dm3chr2.dp4chr2.out dm3chr2L.dp4chr2.out 
+mv t.bed s.bed
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed -format=pdf
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --format=pdf
+faSize ~/lib/fasta/flies/droMel3.fa
+ll 
+history > xxx
+vi xxx 
+rm xxx 
+history | grep droMel3.fa
+ls
+wc -l *.matrix
+ssh c2b2
+cp esc-liver-lnc-gene.positive.matrix lncRNA.gene.corr
+module add r/3.0.1
+scp c2b2:~/test*chr2*fa ./
+cd sunny/cliff/
+ls
+cd correlation/
+ls
+cd refseq-15/
+ls
+cd esc-Liver/
+scp c2b2:~/test/*chr2*fa ./
+ll ~/usr/scripts/
+getChrSize.pl
+getChrSize.pl ~/lib/fasta/flies/droMel3.fa
+getChrSize.pl ~/lib/fasta/flies/droPse4.fa
+getChrSize.pl ~/lib/fasta/flies/droMel3.fa
+getChrSize.pl ~/lib/fasta/flies/droPse4.fa | head
+vi .Rhistory 
+cd ../../State/esc-Liver/
+vi q.bed 
+ls
+vi s.bed 
+cut -f3 *bed
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf
+cat q.bed 
+cat s.bed 
+vi q.bed 
+vi s.bed 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf
+vi esc-liver-lnc-gene.positive.dat 
+grep "uc008fch" esc-liver-lnc-gene.positive.dat > t1.dat
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=s.bed --sbed=q.bed --format=pdf
+vi t1.dat 
+vi select-gene.expression 
+vi select.pl 
+vi tmp.pl 
+vi read.pl 
+vi /home/qczhang/usr/software/quota-alignment/scripts/bed_utils.py
+vi select.pl 
+vi dm3chr2L.dp4chr2.out 
+vi s.bed 
+vi q.bed 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf
+./select.pl esc-liver-lnc-gene.positive.dat > t1.dat 
+vi t1.dat 
+vi /home/qczhang/usr/software/quota-alignment/scripts/blast_plot.py
+vi esc-liver-lnc-gene.positive.dat 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf
+vi t1.dat 
+vi esc-liver-lnc-gene.positive.dat 
+vi t1.dat 
+vi esc-liver-lnc-gene.positive.dat 
+vi select.pl 
+./select.pl esc-liver-lnc-gene.positive.dat > t1.dat 
+vi t1.dat 
+vi select-gene.expression 
+vi t1.dat 
+vi select-gene.expression 
+vi t1.dat 
+vi lncRNA-select.expression 
+vi t1.dat 
+vi lncRNA-select.expression 
+vi esc-liver-lnc-gene.positive.dat 
+vi t1.dat 
+vi /home/qczhang/usr/software/quota-alignment/scripts/blast_plot.py
+vi esc-liver-lnc-gene.positive.dat 
+vi lncRNA-select.expression 
+ll
+vi dm3chr2L.dp4chr2.out 
+vi q.bed 
+vi s.bed 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf
+vi /home/qczhang/usr/software/quota-alignment/scripts/bed_utils.py
+ll 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=s.bed --sbed=q.bed --format=pdf
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf
+vi /home/qczhang/usr/software/quota-alignment/scripts/blast_plot.py
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+cat yyy 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+cat yyy 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+head yyy 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+head xxx 
+head yyy 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+head xxx 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+cat yyy 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=s.bed --sbed=q.bed --format=pdf 1> xxx 2> yyy
+cat yyy 
+cat s.bed 
+cat q.bed 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+cat xxx 
+cat yyy 
+cat q.bed 
+cat s.bed 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll
+head xxx 
+vi s.bed 
+vi q.bed 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+cat yyy 
+ll dm3chr2L.p
+ll dm3chr2L.dp4chr2.pdf 
+vi t1.dat 
+cp read.pl read-2.pl 
+vi read-2.pl 
+./read-2.pl t1.dat > t2.dat
+vi t2.dat 
+../../../../work/Chip-seq/Mouse-ESC-GSE47949/deletmutipl-2.pl t2.dat > t3.dat
+vi t3.dat 
+vi t2.dat 
+ll 
+rm t2
+rm t2.dat 
+cd chu/
+ll
+cd u1u2/
+ll 
+vi t1.dat 
+cat note 
+grep "uc009cxn" t1.dat > t4.dat
+vi t4.dat 
+./read-2.pl t4.dat > t5 
+vi t5
+cp ../../../../work/Chip-seq/Mouse-ESC-GSE47949/deletmutipl-2.pl ./
+./deletmutipl-2.pl t5 > t6
+vi t6
+mv uc009cxn.goterm
+mv t6  uc009cxn.goterm
+ll 
+vi pathU1U2binder.pl 
+cat o
+cat note 
+history | grep u1u2.shorestPath | TAIL
+history | grep u1u2.shorestPath | tail
+history | grep pathU1U2binder | TAIL
+history | grep pathU1U2binder | tail
+perl pathU1U2binder.pl knownU1U2BP.txt binding.txt preppi.high.tab u1u2.binders.shortestPath
+ll 
+vi pathU1U2binder.pl 
+cp pathU1U2binder.pl pathU1U2binder.knownBinder.pl 
+vi uc009cxn.goterm 
+vi select-gene.expression 
+vi lncRNA-select.expression 
+vi esc-liver-lnc-gene.positive.list 
+ls
+ls *.list
+vi esc-Liver.list 
+ll 
+head xxx 
+ll 
+tail xxx 
+ll 
+vi lncRNA-select.expression 
+ls
+rm xxx yyy 
+ll
+cd ~/chu/u1u2/
+ll
+vi pathU1U2binder.pl 
+ll 
+cat note 
+vi positive-esc-Liver.expression 
+head -30 pathU1U2binder.
+head -30 pathU1U2binder.pl 
+perl pathU1U2binder.pl binding.txt knownU1U2BP.txt preppi.high.tab 111
+vi positive-esc-Liver.lnc 
+vi positive-esc-Liver.expression 
+vi read-2.pl 
+./read-2.pl positive-esc-Liver.expression > t6
+vi t6
+vi read-2.pl 
+./read-2.pl positive-esc-Liver.expression > t6
+vi t6
+grep "Rnu73b" esc-liver-lnc-gene.positive.dat > t7
+vi t7
+ls
+vi t3.dat 
+vi t1.dat 
+grep "Rnu73b" t1.dat > t7
+vi t7
+perl pathU1U2binder.knownBinder.pl knownU1U2BP.txt binding.txt preppi.high.tab 111
+perl pathU1U2binder.knownBinder.pl binding.txt knownU1U2BP.txt preppi.high.tab 111
+ll 
+vi select-gene.expression 
+head 111 
+wc -l 111 
+vi t6
+grep "Rmrp" t1.dat > t8
+perl pathU1U2binder.knownBinder.pl binding.txt knownU1U2BP.txt preppi.high.tab 111
+wc -l 111 
+vi t8 
+cat 111
+vi select-gene.expression 
+ll 
+cat note 
+mv 111 u1u2.knownBinder.shortestPath
+cut -f2 u1u2.knownBinder.shortestPath | sort | uniq -c
+vi t8 
+vi t6
+mv t6 positive-esc-Liver.liver
+vi positive-esc-Liver.liver 
+grep "Scarna" t1.dat > t9
+vi t9 
+vi positive-esc-Liver.liver 
+grep "Scarna2" t1.dat > t9
+vi pathU1U2binder.knownBinder.pl 
+ll 
+cd 
+cd ~/work/genomeAlignment/dotplot/
+ll
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+cat yyy 
+module add python/2.7 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+ll 
+head xxx 
+vi t9
+less xxx 
+wc -l xxx 
+vi ~/usr/software/quota-alignment/scripts/bed_utils.py
+grep print ~/usr/software/quota-alignment/scripts/bed_utils.py
+grep print ~/usr/software/quota-alignment/scripts/blast_plot.py 
+vi positive-esc-Liver.liver 
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf 1> xxx 2> yyy
+grep "uc008fbw" t1.dat > t9
+head xxx 
+ll 
+cat yyy 
+vi t9
+./read-2.pl t9 uc008fbw.goterm
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py 
+./read-2.pl t9 > uc008fbw.goterm
+vi uc008fbw.goterm 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+cat yyy 
+rm xxx yyy 
+ll 
+vi t9 
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+cat yyy 
+vi lncRNA-select.expression 
+vi t9 
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py 
+ll 
+vi select-gene.expression 
+vi t9 
+vi select-gene.expression 
+vi t9 
+vi t1.dat 
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+head yyy 
+vi t9
+head dm3chr2L.dp4chr2.out 
+grep "uc008fbw" t1.dat > t10
+vi t10
+wc -l dm3chr2L.dp4chr2.out 
+wc -l yyy 
+tail yyy 
+rm xxx yyy 
+ll 
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+cat yyy 
+vi t1.dat 
+ls
+vi negative-esc-Liver.state 
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py 
+vi negative-esc-Liver.expression 
+ls
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+cat yyy 
+ls *.matrix
+mkdir positive
+mv positive-esc-Liver.* positive/
+ls
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py 
+mv *.goterm positive/
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+head yyy 
+wc -l yyy 
+mkdir negative
+wc -l *out
+tail yyy 
+mv negative-esc-Liver.* negative/
+ls
+mv t1.dat positive/
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py  
+mkdir tools
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+cat yyy 
+mv *.pl tools/
+ls
+rm xxx yyy 
+ll 
+R
+../../correlation.pl select-gene.expression negative/negative-esc-Liver.expression esc-liver-lnc-gene.negative.matrix &
+mv esc-liver-lnc-gene.positive.* positive/
+ls
+cd positive/
+ls
+vi positive-esc-Liver.liver 
+cd positive/
+grep "Adh6-ps1" t1.dat > t2
+vi t2 
+../tools/read.pl t2 > t3
+vi t3
+cd ../tools/
+vi read.pl 
+cp read-2.pl read-3.pl
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py  
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+head yyy 
+vi read-3.pl 
+cd ../positive/
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py  
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+head yyy 
+../tools/read-3.pl t2 > t3
+vi t3 
+mv t3 Adh6-ps1.goterm
+ls
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py  
+grep get_order ~/usr/software/quota-alignment/scripts/blast_plot.py
+grep get_order ~/usr/software/quota-alignment/scripts/bed_utils.py
+vi ~/usr/software/quota-alignment/scripts/bed_utils.py
+grep "5033403H07Rik" t1.dat > t2
+vi t2 
+../tools/read-3.pl t2 > t3
+vi t3 
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py  
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+mv t3 5033403H07Rik.goterm
+cat yyy 
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=xxq.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+cat yyy 
+cat xxx 
+vi ~/usr/software/quota-alignment/scripts/blast_plot.py   
+grep "Mug-ps1" t1.dat > t2
+../tools/read-3.pl t2 > t3
+vi t3
+vi t2 
+vi ../select-gene.expression 
+mv t3  Mug-ps1.goterm
+vi positive-esc-Liver.expression 
+vi ~/usr/software/quota-alignment/scripts/bed_utils.py
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+cat yyy 
+vi ~/usr/software/quota-alignment/scripts/bed_utils.py
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll
+cat yyy
+vi ~/usr/software/quota-alignment/scripts/bed_utils.py
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+cat yyy 
+vi ../select-gene.expression 
+vi ~/usr/software/quota-alignment/scripts/bed_utils.py
+~/usr/software/quota-alignment/scripts/blast_plot.py dm3chr2L.dp4chr2.out --qbed=q.bed --sbed=s.bed --format=pdf --synteny 1> xxx 2> yyy
+ll 
+cat xxx 
+vi t2 
+grep "Gm10319" t1.dat > t2
+../tools/read-3.pl t2 > t3
+vi t3
+vi t2 
+mv t3 Gm10319.goterm
+vi ~/usr/software/quota-alignment/scripts/bed_utils.py
+cd ~/usr/software/
+ll 
+wget http://osfinder.dna.bio.keio.ac.jp/src/osfinder_v1.4.tar.gz
+ll 
+tar -zxvd osfinder_v1.4.tar.gz 
+tar -zxvf osfinder_v1.4.tar.gz 
+ll 
+rm osfinder_v1.4.tar.gz 
+ll 
+grep "2310001H17Rik" t1.dat > t2
+cd osfinder_v1.4/
+ll 
+../tools/read-3.pl t2 > t3
+ll samples/
+vi t3
+ll 
+ll scripts/
+ll 
+ll src/
+mv t3 2310001H17Rik.goterm
+module available
+cd 
+cd -
+ll 
+cd src/
+ll 
+make
+ll 
+./os
+./osfinder 
+cd ..
+ll 
+cd samples/
+ll 
+grep "AF357399" t1.dat > t2
+../tools/read-3.pl t2 > t3
+vi t3 
+../src/osfinder -i sce-spo.blastp.anchor.txt -o sce-spo.blastp -n 2 -s 10000
+ll 
+cat sce-spo.blastp.os.txt 
+mkdir input
+mv mtu-mbo* sce-spo.blastp.anchor.txt input/
+mkdir output
+mv sce-spo.blastp.* output/
+ll 
+cd ..
+ll 
+cd scripts/
+ll
+cat exec_blastp.pl 
+ll 
+vi draw_
+vi draw_dot_plot.pl 
+mv AF357399.goterm
+perl -c draw_dot_plot.pl 
+mv t3 AF357399.goterm
+vi draw_dot_plot.pl 
+ll 
+grep "1810008I18Rik" t1.dat > t2
+../tools/read-3.pl t2 > t3
+perl draw_dot_plot.pl 
+vi t3 
+mv t3 1810008I18Rik.goterm
+head ../samples/input/sce-spo.blastp.anchor.txt
+perl draw_dot_plot.pl -i ../samples/input/sce-spo.blastp.anchor.txt -a 6 -b 3
+ll 
+ll ../samples/input/
+gnuplot
+ll ../samples/input/sce-spo.blastp.anchor.6vs3.png 
+cd ../samples/input/
+grep "BC024386" t1.dat > t2 
+exit
+../tools/read-3.pl t2 > t3
+ll
+cd -
+ll
+vi t3
+cat draw_dot_plot.pl 
+mv t3 BC024386.goterm
+vi draw_dot_plot.pl 
+perl draw_dot_plot.pl -i ../samples/input/sce-spo.blastp.anchor.txt -a 6 -b 3
+cd -
+ll 
+cd -
+ll 
+cat gnu.14138 
+cat plot.14138 
+vi draw_dot_plot.pl 
+cat plot.14138 
+less ../samples/input/sce-spo.blastp.anchor.txt
+head ../samples/input/sce-spo.blastp.anchor.txt
+head plot.14138 
+vi draw_dot_plot.pl 
+ll 
+perl draw_dot_plot.pl -i ../samples/input/sce-spo.blastp.anchor.txt -a 6 -b 3
+ll ../samples/input/
+ll 
+head plot.14
+head plot.14613 
+grep "4833411C07Rik" t1.dat > t2
+../tools/read-3.pl t2 > t3
+ll
+vi t3
+cd ~/work/genomeAlignment/dotplot/
+ll
+diff t3 Mug-ps1.goterm 
+mkdir quota_alignment
+mv *.* xxx yyy quota_alignment/
+ll
+mkdir osfinder
+ll
+cd osfinder/
+ll 
+ll ../quota_alignment/
+ln -s ../quota_alignment/dm3chr2L.dp4chr2.out 
+ll 
+head dm3chr2L.dp4chr2.out 
+mv t3 4833411C07Rik.goterm
+head ~/usr/software/osfinder_v1.4/samples/input/sce-spo.blastp.anchor.txt
+ll 
+cat draw_dot_plot.pl 
+cp ~/usr/software/osfinder_v1.4/scripts/draw_dot_plot.pl ./
+cd ~/work/genomeAlignment/
+ll
+cd do
+cd dotplot/
+ll
+cd osfinder/
+ll
+ll 
+perl draw_dot_plot.pl 
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.pgng
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.png
+ll
+rm dm3chr2L.dp4chr2.pgng 
+ll 
+pwd
+ll 
+vi draw_dot_plot.pl 
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.png -e 1e-3
+ll 
+grep "Rdh18-ps" t1.dat > t2
+../tools/read-3.pl t2 > t3
+vi t3 
+mv t3 Rdh18-ps.goterm
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.png -e 1e-3 -1 6e6 -2 8e6 -3 0 -4 2e6
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.png -e 1e-3 -1 6e6 -2 8e6 -3 1 -4 2e6
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.png -e 1e-3 -1 6e6 -2 8e6 -3 1 -4 5e6
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.png -e 1e-3 -1 6e6 -2 9e6 -3 1 -4 5e6
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.png -e 1e-3 -1 6e6 -2 1.2e7 -3 1 -4 5e6
+ll 
+rm gnu.1*
+rm plot.1*
+ll 
+perl draw_dot_plot.pl -i dm3chr2L.dp4chr2.out -a chr2L -b chr2 -o dm3chr2L.dp4chr2.png -e 1e-3 -1 6e6 -2 1.2e7 -3 1 -4 5e6
+ll 
+cat plot.18545 
+grep "Serpina4-ps1" t1.dat > t2
+../tools/read-3.pl t2 > Serpina4-ps1.goterm
+vi Serpina4-ps1.goterm 
+vi draw_dot_plot.pl 
+ll 
+cd -
+cd ~/usr/software/osfinder_v1.4/
+ll
+cd scripts/
+ll
+rm gnu.14* plot.14*
+ll 
+./draw_dot_plot.pl 
+cd ../samples/
+ll
+cd input/
+ll
+cd ../
+ll 
+ll output/
+head output/sce-spo.blastp.chain.txt 
+ll 
+vi output/sce-spo.blastp.chain.txt 
+ll 
+cd input/
+ll
+vi mtu-mbo-mle.murasaki.anchor.txt 
+head *.txt
+ll 
+vi
+ll 
+vi mtu-mbo.murasaki.anchor.txt 
+ll 
+../../scripts/draw_dot_plot.pl 
+../../scripts/draw_dot_plot.pl -i mtu-mbo.murasaki.anchor.txt -a 1 -b 1
+ll 
+ll 
+head plot.19556 
+tail ../../scripts/draw_dot_plot.pl 
+vi gnu.19556 
+grep "Serpina3h" t1.dat > t2
+../tools/read-3.pl t2 > Serpina3h.goterm
+gnuplot gnu.19556 
+ll 
+head plot.18545 
+cd ../negative/
+ls
+cp ../select-gene.expression ./ooo
+../tools/test-4.pl negative-esc-Liver.lnc > negative-esc-Liver-lnc-gene.list &
+cp plot.19556 xxx
+vi xxx 
+gnuplot xxx
+vi positive-esc-Liver.expression 
+cat xxx 
+head gnu.19556 
+vi ../negative/negative-esc-Liver-lnc-gene.list 
+head plot.19556 
+cp plot.19556 xxx
+vi ../tools/test-4.pl 
+vi ooo
+vi xxx 
+gnuplot xxx
+vi ../negative/ooo
+mv xxx plot.19557
+gnuplot plot.19557
+cp plot.19556 plot.19557
+vi ../tools/test-4.pl 
+ls
+vi plot.19557
+gnuplot plot.19556
+vi gnu.19556 
+cp gnu.19556 xxx
+vi xxx 
+ll 
+rm plot.19557 
+ll 
+cp plot.19556 yyy
+vi yyy 
+cd sunny/cliff/correlation/State/esc-Liver/positive/
+ls
+gnuplot xxx
+ll 
+vi yyy 
+gnuplot xxx
+cat yyy 
+grep "Cyp2d37-ps" t1.dat > t2 
+../tools/read-3.pl t2 > t3
+vi t3 
+mv t3 Cyp2d37-ps.goterm
+grep "Cyp2d13" t1.dat > t2 
+../tools/read-3.pl t2 > Cyp2d13.goterm
+ll 
+rm xxx yyy 
+ll 
+cd ~/work/genomeAlignment/
+ll
+cd nm1_pan2/
+ll 
+ll chain
+ll 
+cd net/
+ll
+rm nomLeu1ToPanTro2.over.chain 
+ln -s /home/qczhang/lib/liftover/nomLeu1ToPanTro2.over.chain nomLeu1.panTro2.over.chain
+ll 
+head nomLeu1.panTro2.all.chain 
+grep "Atp6v0c-ps2" t1.dat > t2
+tail nomLeu1.panTro2.all.chain 
+../tools/read-3.pl t2> Atp6v0c-ps2.goterm
+vi Atp6v0c-ps2.goterm 
+head nomLeu1.panTro2.over.chain 
+ll 
+ll /home/qczhang/lib/liftover/nomLeu1ToPanTro2.over.chain
+ll /home/qczhang/lib/liftover/nomLeu1ToPanTro2.over.chain -h
+ll -h
+tail nomLeu1.panTro2.noClass.net 
+grep net nomLeu1.panTro2.noClass.net | wc -l
+grep net nomLeu1.panTro2.noClass.net | head
+grep "Snhg9" t1.dat > t2
+../tools/read-3.pl t2> Snhg9.goterm
+ll 
+vi Snhg9.goterm 
+vi positive-esc-Liver.expression 
+ls
+vi esc-liver-lnc-gene.positive.dat 
+grep "H2-K2" t1.dat > t2
+../tools/read-3.pl t2> H2-K2.goterm
+cd ..
+ll 
+cd quota_alignment/
+ll
+cd ~/usr/software/quota-alignment/
+ll
+cd scripts/
+ll
+vi blast_plot.py 
+ll 
+module add
+module available
+ll 
+cd ~/usr/
+ll 
+cd software/
+ll
+wget http://sourceforge.net/projects/mummer/files/mummer/3.23/MUMmer3.23.tar.gz/download
+ll 
+tar -zxvf MUMmer3.23.tar.gz 
+ll 
+rm MUMmer3.23
+rm MUMmer3.23.tar.gz 
+ll 
+cd MUMmer3.23/
+ll
+cd ..
+ll 
+mv MUMmer3.23/ mummer3.23
+ll 
+cd mummer3.23/
+ll
+cat README 
+ll 
+cd scripts/
+ll 
+vi mapview.pl 
+ll 
+vi mummerplot.pl 
+perl mummerplot.pl -h
+vi mummerplot.pl 
+chmod +x mummerplot.pl 
+./mummerplot.pl 
+vi mummerplot.pl 
+which gnuplot
+gnuplot
+ll ~/usr/software/quota-alignment/
+ll ~/usr/software/quota-alignment/scripts/
+ll 
+cd ../
+ll 
+cd ..
+ll 
+cd dotplot/
+ll 
+cd quota_alignment/
+ll
+head xxx yyy 
+head dm3chr2L.dp4chr2.out 
+head -20 dm3chr2L.dp4chr2.out 
+vi negative-esc-Liver-lnc-gene.list 
+vi negative-esc-Liver.lnc 
+ls
+vi negative-esc-Liver.expression 
+vi ../positive/positive-esc-Liver.lnc 
+vi negative-esc-Liver.lnc 
+head -200 dm3chr2L.dp4chr2.out > test.out
+../tools/test-4.pl negative-esc-Liver.expression > negative-esc-Liver-lnc-gene.list &
+vi test.out 
+ll 
+cat test.out 
+pwd
+ll 
+~/usr/software/quota-alignment/scripts/blast_plot.py 
+~/usr/software/quota-alignment/scripts/blast_plot.py --qbed q.bed --sbed s.bed --format=pdf test.out 
+ll 
+rm xxx yyy 
+ll 
+pwd
+grep "Gm4013" t1.dat > t2
+../tools/read-3.pl t2> Gm4013.goterm
+vi Gm4013.goterm 
+ll 
+cat q.bed
+cat s.bed 
+~/usr/software/quota-alignment/scripts/blast_plot.py --qbed=q.bed --sbed=s.bed --format=pdf test.out 
+ll 
+~/usr/software/quota-alignment/scripts/blast_plot.py --sbed=q.bed --qbed=s.bed --format=pdf test.out 
+grep "Cyp2c53-ps" t1.dat > t2
+ll 
+../tools/read-3.pl t2> Cyp2c53-ps.goterm
+vi Cyp2c53-ps.goterm 
+ls
+vi negative-esc-Liver-lnc-gene.list 
+../tools/correlation_list.pl negative-esc-Liver-lnc-gene.list negative-esc-Liver-lnc-gene.dat &
+grep "Gm10768" t1.dat > t2
+../tools/read-3.pl t2> Gm10768.goterm
+vi Gm10768.goterm 
+grep "uc007ana.1" t1.dat > t2
+../tools/read-3.pl t2> uc007ana.1.goterm
+vi uc007ana.1.goterm 
+grep "uc007biz.1" t1.dat > t2
+../tools/read-3.pl t2> uc007biz.1.goterm
+vi uc007biz.1.goterm 
+grep "uc007cwm.1" t1.dat > t2
+../tools/read-3.pl t2> uc007cwm.1.goterm
+vi uc007cwm.1.goterm 
+grep "uc008kbr.1" t1.dat > t2
+../tools/read-3.pl t2> uc008kbr.1.goterm
+grep "uc012bxf.1" t1.dat > t2
+../tools/read-3.pl t2> uc012bxf.1.goterm
+vi uc012bxf.1.goterm 
+grep "uc008laf.1" t1.dat > t2
+../tools/read-3.pl t2> uc008laf.1.goterm
+vi uc008laf.1.goterm 
+grep "uc008myp.1" t1.dat > t2
+../tools/read-3.pl t2> uc008myp.1.goterm
+grep "uc008nai.1" t1.dat > t2
+../tools/read-3.pl t2> uc008nai.1.goterm
+grep "uc008svs.1" t1.dat > t2
+../tools/read-3.pl t2> uc008svs.1.goterm
+grep "uc008swh.1" t1.dat > t2
+../tools/read-3.pl t2> uc008swh.1.goterm
+vi uc008swh.1.goterm 
+vi t2
+vi t1.dat 
+vi positive-esc-Liver.expression 
+ls
+vi esc-liver-lnc-gene.positive.dat 
+grep "uc008txs.1" t1.dat > t2
+../tools/read-3.pl t2> uc008txs.1.goterm
+grep "uc008ztz.1" t1.dat > t2
+../tools/read-3.pl t2> uc008ztz.1.goterm
+grep "uc009bfy.1" t1.dat > t2
+../tools/read-3.pl t2> uc009bfy.1.goterm
+vi uc009bfy.1.goterm 
+grep "uc009bsy.1" t1.dat > t2
+../tools/read-3.pl t2> uc009bsy.1.goterm
+vi uc009bsy.1.goterm 
+../tools/read-3.pl t2> uc009ccw.1.goterm
+vi uc009ccw.1.goterm 
+grep "uc009ccw.1" t1.dat > t2
+../tools/read-3.pl t2> uc009ccw.1.goterm
+vi uc009ccw.1.goterm 
+l 
+ll 
+cd 
+cd work/
+cd genomeAlignment/
+ll
+cd do
+grep "uc009cjp.1" t1.dat > t2
+cd dotplot/
+ll
+../tools/read-3.pl t2> uc009cjp.1.goterm
+touch chainTognuplot.pl
+ll 
+vi chainTognuplot.pl 
+ll
+vi uc009cjp.1.goterm 
+ll osfinder/
+cat osfinder/draw_dot_plot.pl >> chainTognuplot.pl 
+ls
+grep "uc009did.1" t1.dat > t2
+../tools/read-3.pl t2> uc009did.1.goterm
+vi chainTognuplot.pl 
+perl -c chainTognuplot.pl 
+qrsh -now n
+vi chainTognuplot.pl 
+vi positive-esc-Liver.expression 
+perl -c chainTognuplot.pl 
+exit
+exit
+vi chainTognuplot.pl 
+perl -c chainTognuplot.pl 
+vi chainTognuplot.pl 
+perl -c chainTognuplot.pl 
+vi chainTognuplot.pl 
+emacs
+cd sunny/cliff/correlation/State/esc-Liver/
+ls
+cd positive/
+ls
+cd sunny/cliff/correlation/State/esc-Liver/positive/
+vi ../../../refseq-15/esc-Liver/esc-Liver.gene 
+ll
+ll 
+ll -a
+wc -l .bash_profile 
+wc -l .bash_history 
+ll 
+cd usr/software/
+ll
+cd quota-alignment/
+ll
+cd scripts/
+ll
+vi blast_plot.py 
+ll 
+clear
+ll 
+ll ~/work/genomeAlignment/dotplot/quota_alignment/
+module python/2.7
+module add python/2.7 
+./blast_plot.py 
+ln -s ~/work/genomeAlignment/dotplot/quota_alignment/
+ll 
+ll quota_alignment/
+./blast_plot.py quota_alignment/test.out --sbed=s.bed --qbed=q.bed --format=pdf 
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf 
+ll test.pdf
+ll
+ll quota_alignment/
+ls
+history -100
+history 100
+ls
+screen
+ls
+vi quota_alignment/test.out 
+vi ~/.vimr
+vi ~/.viminfo 
+vi ~/.vimrc
+vi quota_alignment/test.out 
+cd ~/.vim
+ls
+mkdir -p ~/.vim/autoload ~/.vim/bundle; curl -Sso ~/.vim/autoload/pathogen.vim     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+ls
+cd ~/.vim/bundle
+git clone https://github.com/scrooloose/nerdtree.git
+vi ~/.vimrc 
+vi quota_alignment/test.out 
+cd -
+ls
+cd ../../
+ls
+mkdir esc-Testis
+cd esc-Testis/
+ls
+cd ~/usr/software/quota-alignment/scripts/
+ls
+vi ~/.vir
+vi ~/.vimrc 
+ls
+vi blast_plot.py 
+cp blast_plot.py blast_plot.py.bak
+scp wanglab@171.65.8.252:/Users/wanglab/labmembers/mdong/work/Bivalent/Analysis/GENE-expression/Testis+ESC/esc-testis.dat ./
+vi esc-testis.dat 
+vi ../esc-Liver/tools/tmp.pl 
+vi ../esc-Liver/tools/select.pl 
+fg
+vi blast_plot.py 
+vi ~/.vimrc 
+vi blast_plot.py 
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+f
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+cd ../esc-Liver/
+ls
+vi esc-liver-lnc.state 
+fg
+grep get_order *
+cd ../esc-Testis/
+vi esc-testis.dat esc-testis.dat 
+scp wanglab@171.65.8.252:/Users/wanglab/labmembers/mdong/work/Bivalent/Analysis/LncRNA-state/*.pl ./
+scp wanglab@171.65.8.252:/Users/wanglab/labmembers/mdong/work/Bivalent/Analysis/LncRNA-state/esc-Testis-lnc-select.state ./
+ls
+vi esc-testis.dat 
+vi select.pl 
+./select.pl esc-testis.dat > esc-Testis.state
+vi esc-Testis.state 
+cd sunny/cliff/correlation/State/esc-Testis/
+../../correlation.pl esc-Testis.state esc-Testis-lnc-select.state esc-Testis-lnc.matrix &
+ls
+vi esc-Testis-lnc.matrix 
+vi ../esc-Liver/tools/test-4.pl 
+vi ../esc-Liver/tools/test-3.pl 
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+cp esc-Testis.state ooo
+vi ooo
+fg
+../esc-Liver/tools/test-3.pl esc-Testis-lnc-select.state > esc-Testis-lnc.list &
+ls
+vi esc-Testis-lnc.list 
+vi ../../correlation_list.pl 
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+vi ../esc-Liver/tools/correlation_list.pl 
+g
+../esc-Liver/tools/correlation_list.pl esc-Testis-lnc.list esc-Testis-lnc.dat &
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+vi esc-Testis-lnc.dat 
+vi esc-Testis-lnc.list 
+vi esc-Testis-lnc.dat 
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+grep "Spata18" esc-Testis-lnc.dat > Spata18.lnc
+vi Spata18.lnc 
+vi ../esc-Liver/tools/select.pl 
+../esc-Liver/tools/select.pl Spata18.lnc > Spata18.lnc.positive
+vi Spata18.lnc.positive 
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+fg
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+fg
+cd ../../
+ls
+vi positive-esc-Liver.expression 
+cd refseq-15/
+ls
+cd Gene-LncRNA/
+ls
+vi select-gene.expression 
+cd ../
+ls
+cd ../State/
+ls
+cd esc-Testis/
+cp ../esc-Liver/select-gene.expression ./
+cp ../esc-Liver/lncRNA-select.expression ./
+vi lncRNA-select.expression 
+vi ../esc-Liver/tools/pick-2.pl 
+../esc-Liver/tools/pick-2.pl Spata18.lnc.positive 
+cp lncRNA-select.expression ooo
+vi ../esc-Liver/tools/pick-2.pl 
+../esc-Liver/tools/pick-2.pl Spata18.lnc.positive > t3
+vi t3
+vi Spata18.lnc.positive 
+../esc-Liver/tools/pick-2.pl Spata18.lnc.positive > t3
+vi t3
+vi ooo
+vi Spata18.lnc.positive 
+../esc-Liver/tools/pick-2.pl Spata18.lnc.positive > t3
+vi t3
+mv t3 Spata18.lnc.positive.dat
+vi select-gene.expression 
+../../correlation.pl select-gene.expression Spata18.lnc.positive.dat Spata18-gene-lnc.matrix &
+ls
+wget http://www.vim.org/scripts/download_script.php?src_id=20031
+ls
+mv download_script.php\?src_id\=20031 a.zip
+mv a.zip /tmp
+cd /tmp
+ls
+cd ../../refseq-15/
+ls
+unzip a.zip 
+mkdir esc-Testis
+cd esc-Testis/
+mkdir ~/.vim/bundle/bufexplorer
+mv doc ~/.vim/bundle/bufexplorer
+mv plugin ~/.vim/bundle/bufexplorer
+ls ~/.vim/bundle/bufexplorer
+fg
+cd - 
+vi quota_alignment/test.out 
+ls
+ls
+cd ../esc-Liver/
+ls
+vi esc-Liver-lncrna.dat 
+../../State/esc-Liver/tools/select.pl esc-Liver-lncrna.dat > t1
+vi blast_plot.py
+vi t1
+cd ../../State/esc-Liver/
+ls
+vi esc-Liver.dat 
+ls
+cd ../
+cd esc-Liver/positive/
+ls
+mkdir Go
+mv *.goterm Go
+ls
+vi esc-liver-lnc-gene.positive.dat 
+vi positive-esc-Liver.l
+vi positive-esc-Liver.lnc 
+cd ../
+ls
+vi esc-Liver.dat 
+ll 
+screen -r
+screen -r 20354.pts-125.scg3-ln01
+tools/select.pl esc-Liver.dat > t11
+screen -r 2621.pts-45.scg3-ln01
+screen -r 4968.pts-45.scg3-ln01
+screen -r
+screen -r 26654.pts-148.scg3-ln01
+ll 
+vi t11
+cd work/genomeAlignment/
+ll
+cd dotplot/
+vi tools/select.pl 
+ll
+vi esc-Liver.dat 
+cat \#\:q# 
+rm \#\:q# 
+ll 
+cd quota_alignment/
+ll
+cd ~/usr/software/quota-alignment/scripts/
+ll
+vi esc-Liver.list 
+ls
+vi esc-liver-lnc.state 
+vi esc-Liver.dat 
+vi esc-liver-lnc.state 
+vi esc-Liver.state 
+vi t11
+vi select-gene.expression 
+vi t11
+grep "Igf1" t11 > t12
+vi t12
+mkdir Igf1
+cd Igf1/
+cp ../select-gene.expression ./Igf1.expression
+vi Igf1.expression 
+ls
+ls ../
+ls ../positive/positive-esc-Liver.expression 
+vi ../positive/positive-esc-Liver.expression 
+../../../correlation.pl Igf1.expression ../positive/positive-esc-Liver.expression Igf1-lnc.matrix &
+ls
+vi Igf1-lnc.matrix 
+cp Igf1.expression ooo
+../tools/test-3.pl ../positive/positive-esc-Liver.expression > Igf1-lnc.list
+ls
+vi Igf1-lnc.list 
+../tools/test-4.pl ../positive/positive-esc-Liver.expression > Igf1-lnc.list
+vi Igf1-lnc.list 
+../tools/correlation_list.pl Igf1-lnc.list Igf1-lnc.dat &
+ls
+vi Igf1-lnc.dat 
+vi ../../../correlation_list.pl 
+../../../correlation_list.pl Igf1-lnc.list Igf1-lnc.dat &
+ls
+vi Igf1-lnc.dat 
+../tools/select.pl Igf1-lnc.dat > t1
+vi t1
+vi ../positive/positive-esc-Liver.expression 
+cp ../positive/positive-esc-Liver.expression ./ooo
+../tools/pick-2.pl t1 > t3
+vi t3
+vi ../tools/pick-2.pl 
+vi ooo
+vi t1
+../tools/pick-2.pl t1 > t3
+vi t3
+vi blast_plot.py
+module add python/2.7 
+history | grep blast_plot.py | tail
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+vi quota_alignment/s.bed
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+ll 
+ll quota_alignment/
+vi quota_alignment/s.bed
+vi blast_plot.py
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+ls
+vi ../positive/positive-esc-Liver.expression 
+vi t3
+vi ../positive/positive-esc-Liver.expression 
+vi ../lncRNA-select.expression 
+vi blast_plot.py
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+vi blast_plot.py
+./blast_plot.py quota_alignment/test.out --sbed=quota_alignment/s.bed --qbed=quota_alignment/q.bed --format=pdf
+vi blast_plot.py
+grep get_breaks *.py
+vi t3
+vi blast_plot.py
+mv t3 Igf1-lnc-select.expression
+../../../correlation.pl ../select-gene.expression Igf1-lnc-select.expression Igf1-lnc-gene.expression &
+ls
+vi t1
+ls
+wc -l Igf1-lnc-gene.expression 
+ls
+cp ../select-gene.expression ./ooo
+../tools/test-3.pl Igf1-lnc-select.expression > Igf1-lnc-select.list &
+ls
+../../../correlation_list.pl Igf1-lnc-select.list Igf1-lnc-select.dat &
+vi Igf1-lnc-select.dat 
+vi Igf1-lnc-select.list 
+vi ../tools/test-4.pl 
+../tools/test-4.pl Igf1-lnc-select.expression > Igf1-lnc-select.list &
+ls
+../../../correlation_list.pl Igf1-lnc-select.list Igf1-lnc-select.dat &
+ls
+vi Igf1-lnc-select.dat 
+vi Igf1-lnc-select.list
+vi Igf1-lnc-select.dat 
+../tools/select.pl Igf1-lnc-select.dat > t2
+vi t2
+../tools/read.pl t2 > t3
+vi t3
+../tools/read-3.pl t2 > t3
+vi t3
+../tools/deletmutipl-2.pl t3 > t4
+vi t4
+mv Igf1-lnc-gene.goterm
+mv t4 Igf1-lnc-gene.goterm
+ls
+vi Igf1-lnc-select.expression 
+vi t3 
+rm t3
+vi t2
+vi Igf1-lnc-select.expression 
+grep "uc007biz.1" t2 > t3
+vi t3
+../tools/read-3.pl t3 > t4
+vi t4
+../tools/deletmutipl-2.pl t4 > t5
+vi t5
+mv t5 Igf1-uc007biz.1.goterm
+vi Igf1-uc007biz.1.goterm 
+vi ../select-gene.expression 
+vi ../lncRNA-select.expression 
+vi Igf1-uc007biz.1.goterm 
+vi ooo
+../tools/pick-2.pl Igf1-uc007biz.1.goterm > t5
+vi t5
+vi Igf1-lnc-select.list 
+vi Igf1-lnc-select.expression 
+grep "Serpina4-ps1" t1 > t6
+vi t6
+vi t1 
+vi t2 
+grep "Serpina4-ps1" t2 > t6
+vi t6
+vi Igf1-uc007biz.1.goterm 
+vi t6
+vi Igf1-uc007biz.1.goterm 
+vi t6
+vi Igf1-uc007biz.1.goterm 
+exit
+vi t2 
+vi t6
+../tools/read-2.pl t6 > Igf1-Serpina4-ps1.goterm
+vi Igf1-Serpina4-ps1.goterm 
+vi Igf1-lnc-select.list 
+vi Igf1-lnc-select.expression 
+grep "Cyp2d13" t2 > t6
+vi t6
+../tools/read-2.pl t6 > Igf1-Cyp2d13.goterm
+vi Igf1-Cyp2d13.goterm 
+diff Igf1-Cyp2d13.goterm Igf1-Serpina4-ps1.goterm 
+vi Igf1-lnc-select.expression 
+grep "uc007hpe" t2 > t6
+vi t6
+vi Igf1-lnc-select.expression 
+grep "Adh6" t2 > t6
+vi t6
+../tools/read-2.pl t6 > Igf1-Adh6.goterm
+cd ../
+cd ../esc-Testis/Spata18
+cd ../esc-Testis/
+ls
+vi Spata18.lnc.positive.dat 
+cd ../esc-Liver/
+ls
+cd Igf1/
+ls
+mkdir GO
+mv *.goterm Go
+mv *.goterm GO
+ls
+vi Igf1.expression 
+../../../correlation.pl ../select-gene.expression Igf1.expression Igf1-gene.matrix &
+vi ooo
+../tools/test-4.pl Igf1.expression > Igf1-gene.list &
+vi Igf1-gene.list 
+../../../correlation_list.pl Igf1-gene.list Igf1-gene.dat &
+ls
+vi Igf1-gene.dat 
+../tools/select.pl Igf1-gene.dat > Igf1-gene-select.dat
+vi Igf1-gene-select.dat 
+ls
+vi Igf1-lnc.dat 
+cp ../tools/select.pl ../tools/select-negative.pl 
+vi ../tools/select-negative.pl 
+vi Igf1-lnc.dat 
+../tools/select-negative.pl Igf1-lnc.dat > Igf1-lnc-select.negative
+vi Igf1-lnc-select.negative 
+vi ooo
+vi ../lncRNA-select.expression 
+vi Igf1-lnc-select.negative 
+vi ../lncRNA-select.expression 
+ls
+vi ../tools/select-negative.pl 
+../tools/select-negative.pl Igf1-lnc.dat > Igf1-lnc-select.negative
+vi Igf1-lnc-select.negative 
+vi ../tools/select-negative.pl 
+vi ../lncRNA-select.expression 
+ls
+cd ../
+ls
+cd Igf1/
+ls
+vi Igf1-lnc.list 
+mv Igf1-lnc-positive.list
+mv Igf1-lnc.list Igf1-lnc-positive.list
+vi Igf1-lnc.dat 
+mv Igf1-lnc.dat Igf1-lnc-positive.dat
+ls
+rm Igf1-lnc-select.negative 
+ls
+vi t1 
+vi t2
+mv t2 high-correlation.dat
+ls
+cd ../
+mv Igf1/ Igf1-positive
+mkdir Igf1-nagative
+mv Igf1-nagative/ Igf1-negative/
+cd Igf1-negative/
+ls
+vi ../Igf1-positive/Igf1-lnc-select.dat 
+vi ../Igf1-positive/Igf1-lnc-select.expression 
+vi ../Igf1-positive/Igf1-lnc-positive.dat 
+vi ../Igf1-positive/Igf1-lnc-positive.list 
+vi  ../negative/negative-esc-Liver.expression 
+cp  ../negative/negative-esc-Liver.expression ./ooo
+ls
+vi ooo
+../tools/test-4.pl ../Igf1-positive/Igf1.expression > Igf1-negative-lnc.list &
+ls
+../../../correlation_list.pl Igf1-negative-lnc.list Igf1-negative-lnc.dat &
+ls
+../tools/select-negative.pl *.dat > t1
+vi t1
+vi ../lncRNA-select.expression 
+vi t1
+vi ../lncRNA-select.expression 
+vi t1
+vi ../tools/pick-2.pl 
+cp ../lncRNA-select.expression ./ooo
+../tools/pick-2.pl *.dat > t2
+vi t2 
+ls
+vi Igf1-negative-lnc.dat 
+vi t2 
+vi Igf1-negative-lnc.list 
+vi t2 
+ls
+vi Igf1-negative-lnc.dat 
+vi t2 
+vi Igf1-negative-lnc.list 
+vi ../tools/select-negative.pl 
+../tools/select-negative.pl *.dat > t1
+vi t1
+vi Igf1-negative-lnc.list 
+vi Igf1-negative-lnc.dat 
+cp ../../../../../work/Chip-seq/Mouse-ESC-GSE47949/analysis/rank.pl ./
+vi rank.pl 
+vi t2 
+./rank.pl t2 > t3
+vi t3
+../tools/pick-2.pl t3 > t4
+vi t4
+mv t4
+rm t4
+vi t3
+vi t2
+vi t3
+vi t2
+vi t3
+vi t2
+vi t3 
+mv t5 Igf1-negative-lnc.rank
+mv t3 Igf1-negative-lnc.rank
+ls
+vi Igf1-negative-lnc.rank 
+vi t2
+cp Igf1-negative-lnc.rank t3
+vi t3
+vi Igf1-negative-lnc.rank 
+vi t2
+../tools/pick-2.pl t3 > t4
+vi ooo
+vi t4
+vi ../Igf1-positive/Igf1.expression 
+vi t4
+mv t4 Igf1-negative-lnc.select
+../../../correlation.pl Igf1-negative-lnc.select ../select-gene.expression Igf1-negative-lnc.matrix &
+vi ooo
+cp ../select-gene.expression ./ooo
+../tools/test-4.pl Igf1-negative-lnc.select > Igf1-negative-lnc.select.list &
+ls
+vi t3
+vi t4
+rm t3
+vi t2
+mv t2 Igf1-negative-lnc.all
+ls
+vi t1
+rm t1
+ls
+vi Igf1-negative-lnc.select.list 
+vi ooo
+vi Igf1-negative-lnc.select.list 
+ls
+../../../correlation_list.pl Igf1-negative-lnc.select.list Igf1-negative-lnc.select.dat &
+ls
+vi Igf1-negative-lnc.select.dat 
+vi Igf1-negative-lnc.select
+vi Igf1-negative-lnc.dat 
+vi Igf1-negative-lnc.select.dat 
+../tools/select.pl Igf1-negative-lnc.select.dat > t1
+vi t1
+vi Igf1-negative-lnc.select.dat 
+vi t1
+mv t1.dat
+mv t1 t1.dat
+grep "uc008kgb" t1.dat > t2
+vi t2
+vi t1.dat 
+grep "uc008kb" t1.dat > t2
+vi t2
+vi Igf1-negative-lnc.select
+grep "uc007vsr" t1.dat > t2
+vi t2
+vi Igf1-negative-lnc.select
+grep "linc1283" t1.dat > t2
+vi t2
+../tools/read-2.pl t2 > linc1283.goterm
+vi linc1283.goterm 
+pwd
+vi Igf1-negative-lnc.select
+grep "uc009vev" t1.dat > t2
+../tools/read-2.pl t2 > uc009vev.1.goterm
+vi uc009vev.1.goterm 
+vi ../select-gene.expression 
+vi Igf1-negative-lnc.select
+grep "snhg5" t1.dat > t2
+../tools/read-2.pl t2 > Snhg5.goterm
+vi Snhg5.goterm 
+grep "Snhg5" t1.dat > t2
+../tools/read-2.pl t2 > Snhg5.goterm
+vi Snhg5.goterm 
+vi ../tools/select.pl 
+grep "Snhg5" t1.dat > t2
+../tools/select.pl Igf1-negative-lnc.select.dat > t4.dat
+vi t4.dat 
+grep "Snhg5" t4.dat > t2
+../tools/read-2.pl t2 > Snhg5.goterm
+vi Snhg5.goterm 
+vi Igf1-negative-lnc.select
+vi Snhg5.goterm 
+vi ../select-gene.expression 
+vi Igf1-negative-lnc.select
+vi ../select-gene.expression 
+vi Igf1-negative-lnc.select
+grep "Scar" t4.dat > t2
+vi Igf1-negative-lnc.select
+vi t2
+../tools/read-2.pl t2 > Scarna3b.goterm
+vi Igf1-negative-lnc.select
+vi Scarna3b.goterm 
+ls
+cd ../../esc-Testis/
+ls
+ls *.dat
+vi Spata18.lnc.positive.dat 
+ls *.list
+ls ../
+ls
+vi Spata18.lnc.positive
+vi Spata18.lnc.positive.dat 
+vo Spata18.lnc
+vi Spata18.lnc
+ls
+cp ../esc-Liver/select-gene.expression ./Spata18.expression
+vi Spata18.expression 
+../esc-Liver/tools/test-4.pl Spata18.expression Spata18.lnc.positive.dat Spata18-lnc.list &
+qrsh -now n
+cd sunny/cliff/
+ls
+cd correlation/State/esc-Testis/
+cd sunny/cliff/correlation/State/esc-Testis/
+ls
+vi Spata18.expression 
+vi Spata18.lnc.positive.dat 
+vi ooo
+cp Spata18.lnc.positive.dat ooo
+../esc-Liver/tools/test-4.pl Spata18.expression > Spata18-lnc-positive.list &
+ls
+vi Spata18-lnc-positive.list 
+../../correlation_list.pl Spata18-lnc-positive.list Spata18-lnc-positive.dat &
+ls
+vi Spata18-lnc-positive.dat 
+../esc-Liver/tools/select.pl Spata18-lnc-positive.dat > t1.dat
+vi t1.dat 
+vi ../esc-Liver/tools/select.pl 
+../esc-Liver/tools/select.pl Spata18-lnc-positive.dat > t1.dat
+vi t1.dat 
+ls
+cp lncRNA-select.expression ooo
+../esc-Liver/tools/pick-2.pl t1.dat > t2.dat
+vi t2.dat 
+vi ../esc-Liver/Igf1-negative/rank.pl 
+../esc-Liver/Igf1-negative/rank.pl t2.dat > t3
+vi t3
+vi t2.dat 
+vi ../esc-Liver/Igf1-negative/rank.pl 
+../esc-Liver/Igf1-negative/rank.pl t2.dat > t3.dat
+vi t3.dat 
+vi t2.dat 
+vi t3.dat 
+vi t2.dat 
+vi t3.dat 
+vi t2.dat 
+vi ooo
+mv ooo uc008ndb.dat
+vi uc008ndb.dat 
+cp ../esc-Liver/select-gene.expression ./ooo
+../esc-Liver/tools/test-4.pl uc008ndb.dat > uc008ndb-gene.list
+../../correlation_list.pl uc008ndb-gene.list uc008ndb-gene.dat &
+ls
+../esc-Liver/tools/select.pl uc008ndb-gene.dat > t4.dat
+vi t4.dat 
+../esc-Liver/tools/read-2.pl t4.dat > uc008ndb.goterm
+vi uc008ndb.goterm 
+vi esc-Testis.state 
+vi t4.dat 
+vi uc008ndb-gene.dat 
+vi esc-Testis.state 
+../esc-Liver/tools/read-2.pl esc-Testis.state > esc-Testis.goterm
+vi esc-Testis.goterm 
+ls
+cd ../esc-Liver/positive/
+ls
+cd ../Igf1-positive/
+ls
+vi Igf1-lnc-select.dat 
+vi Igf1-gene.dat 
+vi Igf1-gene.list 
+ls
+vi ../positive/positive-esc-Liver.lnc 
+ls
+vi t1 
+vi t2
+vi t3 
+vi Igf1-lnc-positive.dat 
+vi Igf1-gene.list 
+vi Igf1-gene.dat
+ls
+vi Igf1-gene-select.dat 
+vi t4
+vi t5 
+vi t6 
+vi t1
+ls GO
+ls
+vi t3 
+vi t1 
+vi t6 
+vi Igf1-lnc-positive.list 
+ls
+../tools/read-2.pl t1 > t1.list
+vi t1.list 
+ls
+cp ../lncRNA-select.expression ./ooo
+../tools/pick-2.pl t1.list > top-30-lnc.expression
+vi top-30-lnc.expression 
+cp ../select-gene.expression ./ooo
+../tools/test-4.pl top-30-lnc.expression > top-30-lnc.list &
+ls
+vi Igf1-gene.list 
+vi top-30-lnc.list 
+../../../correlation_list.pl top-30-lnc.list top-30-lnc.dat &
+vi Igf1-gene.dat 
+../tools/select.pl top-30-lnc.dat > top-30-lnc.high.corr
+vi top-30-lnc.high.corr 
+../tools/read-2.pl top-30-lnc.high.corr > top-30-lnc.goterm
+vi top-30-lnc.goterm 
+../tools/deletmutipl-2.pl top-30-lnc.goterm > t99
+vi t99
+vi ../tools/select.pl 
+../tools/select.pl top-30-lnc.dat > top-30-lnc.high.corr
+../tools/read-2.pl top-30-lnc.high.corr > top-30-lnc.goterm
+../tools/deletmutipl-2.pl top-30-lnc.goterm > t99
+vi t99
+mv t99 top-30-lnc.goterm 
+cd ../positive/
+ls
+vi t1.dat 
+vi esc-liver-lnc-gene.positive.dat 
+vi t1.dat 
+../tools/deletmutipl-2.pl t1.dat > t3
+vi t3
+../tools/read-2.pl t1.dat > t3
+vi t3
+../tools/deletmutipl-2.pl t3 > t4
+vi t4
+ls
+cd ../Igf1-positive/
+ls
+vi top-30-lnc.dat 
+vi top-30-lnc.expression 
+vi Igf1.expression 
+cp top-30-lnc.expression 30+Igf1.expression
+cat Igf1.expression >> 30+Igf1.expression 
+vi 30+Igf1.csv
+module add r/3.0.1
+R
+vi 30+Igf1.csv 
+R
+ls
+mv Rplots.pdf 30+Igf1.pdf
+vi 30+Igf1.csv 
+rm 30+Igf1.csv 
+vi 30+Igf1.csv 
+R
+mv Rplots.pdf 30+Igf1.pdf
+vi 30+Igf1.csv 
+rm 30+Igf1.csv 
+vi 30+Igf1.csv 
+R
+mv Rplots.pdf 30+Igf1.pdf
+vi 30+Igf1.csv 
+R
+mv Rplots.pdf 30+Igf1.pdf
+rm 30+Igf1.csv 
+vi 30+Igf1.csv 
+R
+mv Rplots.pdf 30+Igf1.pdf
+R
+mv Rplots.pdf 30+Igf1.pdf
+vi 30+Igf1.csv 
+R
+mv Rplots.pdf 30+Igf1.pdf
+cp ../tools/read.pl ./
+vi read.pl 
+ls
+cp ../../../read.pl ./
+vi read.pl 
+vi 30+Igf1.pdf 
+vi 30+Igf1.csv 
+rm 30+Igf1.csv 
+vi 30+Igf1.csv 
+R
+mv Rplots.pdf 30+Igf1.pdf
+cp ../../../../../work/chromHMM/GSE47949/2-track/heatmap-bivalent/csv.pl ./
+vi csv.pl 
+./csv.pl 30+Igf1.csv > 30+Igf1.txt
+vi 30+Igf1.txt 
+cat ../../esc-Liver/.Rhistory 
+R
+ls
+mv Rplots.pdf 30+Igf1.pdf 
+R
+vi 30+Igf1.txt 
+R
+mv Rplots.pdf 30+Igf1.pdf 
+R
+mv Rplots.pdf 30+Igf1-3.pdf 
+R
+ls
+mv Rplots.pdf 30+Igf1-4.pdf
+vi .Rhistory 
+cp .Rhistory R_note
+eit
+exit
+qrsh -now n
+exit
+ll 
+cd work/genomeAlignment/
+ll
+cd nm1_pan2/
+ll
+cd ../do
+cd ../dotplot/
+ll 
+cat chainTognuplot.pl 
+cd work/genomeAlignment/
+ll
+cd dotplot/
+ll
+ln -s ../nm1_pan2/ test
+ll 
+ll test/
+mv test data_test
+ll
+ll data_test/
+mv data_test data.yesy
+mv data.yesy data.test
+ll 
+ll data.test/net/
+rm data.test
+ln -s ../nm1_pan2/net/ data.test
+ll data.test/
+head data.test/nomLeu1.panTro2.all.chain 
+vi chainTognuplot.pl 
+vi data.test/nomLeu1.panTro2.all.chain 
+ll data.test/
+head data.test/nomLeu1.panTro2.noClass.net 
+head data.test/nomLeu1.panTro2.all.chain 
+perl -c chainTognuplot.pl 
+perl chainTognuplot.pl -h
+perl chainTognuplot.pl -c data.test/nomLeu1.panTro2.all.chain -a GL397266 -b chr6
+perl chainTognuplot.pl -c data.test/nomLeu1.panTro2.all.chain -a GL397266 -b chr6 -s 100
+ll 
+head plot.22219 
+rm plot.22219 
+ll 
+head plot.22253 
+tail plot.22253 
+ll 
+cat gnu.22253 
+vi gnu.22253 
+cat chainTognuplot.pl 
+gnuplot gnu.22253 
+ll 
+ll data.test/
+grep chain data.test/nomLeu1.panTro2.all.chain | wc -l
+grep chain data.test/nomLeu1.panTro2.all.chain | head -20
+grep chain data.test/nomLeu1.panTro2.all.chain | grep GL397266 | grep chr6 > test.chain
+ll 
+wc -l test.chain 
+head test.chain 
+grep -v chr6_random test.chain > xxx
+mv xxx test.chain
+head test.chain 
+wc -l test.chain 
+ll 
+head -30 data.test/nomLeu1.panTro2.all.chain 
+head data.test/nomLeu1.panTro2.over.chain 
+perl chainTognuplot.pl -c data.test/nomLeu1.panTro2.over.chain -a GL397266 -b chr6 -s 100
+ll 
+date
+cat gnu.22253 
+mv name.png name.overchain.png
+gnuplot gnu.22253 
+ll 
+rm name.png 
+cat gnu.29168 
+l 
+ll 
+rm name.overchain.png 
+ll 
+ll data.test/
+cd work/genomeAlignment/dotplot/
+ll 
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr2L -b chr2 -s 10000 -o dm3ToDroPse4.chr2Lvschr2.over.png
+ll 
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr3R -b chr2 -s 10000 -o dm3ToDroPse4.chr3Rvschr2.over.png
+head ~/lib/liftover/dm3ToDroPse4.over.chain
+ll 
+cp chainTognuplot.pl chainTognuplot.ver1.pl 
+cat ~/usr/software/osfinder_v1.4/scripts/draw_dot_plot.pl 
+head ~/lib/liftover/dm3ToDroPse4.over.chain
+grep -v chain ~/lib/liftover/dm3ToDroPse4.over.chain | cut -f2 | sort | uniq > xxx
+head xxx 
+grep -v chain ~/lib/liftover/dm3ToDroPse4.over.chain | cut -f2 | sort | uniq -c > xxx
+grep -v chain ~/lib/liftover/dm3ToDroPse4.over.chain | cut -f2 | sort -n | uniq -c > xxx
+head xxx 
+tail xxx 
+perl -c chainTognuplot.pl 
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr3R -b chr2 -s 10000 -o dm3ToDroPse4.chr3Rvschr2.2.over.png
+ll 
+sed -n 2752517p ~/lib/liftover/dm3ToDroPse4.over.chain 
+sed -n 2752516,8p ~/lib/liftover/dm3ToDroPse4.over.chain 
+sed -n 2752516,2752518p ~/lib/liftover/dm3ToDroPse4.over.chain 
+sed -n 2752516,2752518p ~/lib/liftover/dm3ToDroPse4.over.chain > xxx
+vi xxx 
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr3R -b chr2 -s 10000 -o dm3ToDroPse4.chr3Rvschr2.2.over.png
+ll 
+vi chainTognuplot.pl 
+ll 
+cd 
+cd usr/software/
+ll
+cd mummer3.23/
+ll 
+cd scripts/
+ll 
+cd mummerplot.pl 
+vi mummerplot.pl 
+ll ../
+ll ../docs/
+ll ../docs/web/
+ll ../docs/web/examples/
+ll ../docs/web/examples/data/
+head ../docs/web/examples/data/mummer3.out 
+head ../docs/web/examples/data/mummer3.align 
+ll 
+cd -
+cd ~/work/genomeAlignment/dotplot/
+ll
+cat plot.48665 
+cat gnu.48665 
+vi gnu.48665 
+gnuplot gnu.48665 
+vi gnu.48665 
+gnuplot gnu.48665 
+vi gnu.48665 
+gnuplot gnu.48665 
+vi gnu.48665 
+gnuplot gnu.48665 
+vi gnu.48665 
+gnuplot gnu.48665 
+ll -a
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr3R -b chr2 -s 10000 -o dm3ToDroPse4.chr3Rvschr2.2.over.png
+ll 
+ll-tr
+ll -tr
+vi gnu.21351 
+gnuplot gnu.21351 
+ll 
+wc -l plot.20106 
+head plot.20106 
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr3R -b chr2 -s 10000 -o dm3ToDroPse4.chr3Rvschr2.2.over.png
+ll 
+tail plot.21671
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr3R -b chr2 -s 10000 -o dm3ToDroPse4.chr3Rvschr2.2.over.png
+ll -h
+vi plot.48665
+ll --tr
+ll -tr
+vi plot.21758
+gnuplot gnu.21758
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr3R -b chr2 -s 10000 -o dm3ToDroPse4.chr3Rvschr2.2.over.png
+ll -tr
+vi gnu.22008 
+gnuplot gnu.22008 
+vi gnu.22008 
+gnuplot gnu.22008 
+vi gnu.22008 
+gnuplot gnu.22008 
+vi gnu.22008 
+perl chainTognuplot.pl -c ~/lib/liftover/dm3ToDroPse4.over.chain -a chr3R -b chr2 -s 10000 -o dm3ToDroPse4.chr3Rvschr2.2.over.png
+vi chainTognuplot.pl 
+ll 
+ll -tr
+head plot.22583
+grep -v 244482 plot.22583 | head
+grep -v 244482 plot.22583 | grep "^$" | head
+grep -v 244482 plot.22583 | grep -v "^$" | head
+vi chainTognuplot.pl 
+ll 
+ll plot.* gnu.*
+rm plot.* gnu.*
+ll 
+cat xxx 
+rm xxx 
+ll 
+cat chainTognuplot.pl 
+ll 
+perl chainTognuplot.pl -c ~/lib/liftover/hg19ToMm9.over.chain -a chr1 -b chr1 -s 10000 -o hg19ToMm9.ch1vschr1.over.png
+ll -h
+screen
+ll
+ll 
+cd work/
+cd genomeAlignment/
+ll 
+ll dotplot/
+cd work/genomeAlignment/
+ll
+ll 
+cd test/
+ll
+cat DEF 
+ll 
+cat no
+cat note 
+ll tmp/
+cat /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+vi doLastz.pl 
+ll
+cp doLastz.pl doLastz.ver1.pl 
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+ll 
+clear
+ll 
+ll tmp/
+ll tmp/blastz.AgdePl/
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+vi doLastz.pl 
+ll 
+ll nm1_pan2/
+vi nm1_pan2/nomLeu1.UCSC.01_05_13.lst 
+ll nm1_pan2/tParts/
+cat nm1_pan2/tParts/part000.lst 
+cat nm1_pan2/tParts/part026.lst 
+cat nm1_pan2/tParts/part025.lst 
+vi nm1_pan2/nomLeu1.UCSC.01_05_13.lst 
+grep -i liftup /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+grep -i lift /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+vi doLastz.pl 
+grep contruct doLastz.pl 
+grep construct doLastz.pl 
+which constructLiftFile.pl
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+head ../nm1_pan2/target.list 
+head ../nm1_pan2/target.lift 
+head ../nm1_pan2/target.lift | cut -f1
+head ../nm1_pan2/target.lift | cut -f2
+wc -l ../nm1_pan2/target.lift 
+tail ../nm1_pan2/target.lift 
+tail ../nm1_pan2/tParts/part066.lst 
+tail ../nm1_pan2/tParts/part000.lst 
+wc -l ../nm1_pan2/target.list
+tail ../nm1_pan2/target.list
+head ../nm1_pan2/target.list
+head ../nm1_pan2/target.lift
+vi ~/usr/software/ucsc_tools/kent/src/hg/utils/automation/constructLiftFile.pl
+ll 
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+cat note 
+ll tmp/
+ll tmp/blastz.AgdePl/
+cat tmp/blastz.AgdePl/t.ADFV01155533.0.3700.fa 
+ll 
+ll tmp/
+cat no
+cat note 
+wc -l nomLeu1.UCSC.01_05_13.lst panTro2.UCSC.12_18_12.lst 
+head nomLeu1.UCSC.01_05_13.lst panTro2.UCSC.12_18_12.lst 
+tail nomLeu1.UCSC.01_05_13.lst panTro2.UCSC.12_18_12.lst 
+ll ../nm1_pan2/qParts/
+cat ../nm1_pan2/qParts/part000.lst 
+cat ../nm1_pan2/qParts/part006.lst 
+cat ../nm1_pan2/qParts/part05.lst 
+cat ../nm1_pan2/qParts/part005.lst 
+cat cmd 
+ll 
+vi doLastz.
+vi doLastz.pl 
+which blastz-normalizeLav
+vi ~/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-normalizeLav
+vi doLastz.pl 
+ll 
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+ll 
+ll tmp/
+cat note 
+cat qParts/part007.lst 
+wc -l tParts/part065.lst
+ll 
+ll tmp/
+ll tmp/blastz.AgdePl/
+cd tmp/blastz.AgdePl/
+grep ADFV01155533 bigCollapse.fa 
+head bigCollapse.fa 
+tail bigCollapse.fa 
+wc -l bigCollapse.fa 
+grep ">" bigCollapse.fa | wc -l
+grep ">" bigCollapse.fa
+cd -
+ll 
+cat no
+cat note 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll 
+ll tmp/
+vi doLastz.pl 
+cat DEF 
+vi DEF
+cat DEF
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll 
+ll tmp/
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+ll test/
+ll test/tmp/
+ll test/tmp/blastz.hLpTOr/
+head test/tmp/blastz.hLpTOr/bigCollapse.fa 
+head test/tmp/blastz.hLpTOr/tmp.chrY.0.23952694.fa 
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+ll 
+ll tmp/
+ll tmp/blastz.hLpTOr/
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx 1> log
+cat log 
+rm log 
+ll
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx
+ll tmp/blastz.Ur5v1b/
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx
+ll /home/qczhang/lib/bowtie-lib/fasta/panTro2.UCSC.12_18_12.2bit
+ll /home/qczhang/work/genomeAlignment/test/tmp//blastz.oewocm
+/home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc -outFormat psl tParts/part065.lst qParts/part007.lst DEF xxx
+ll 
+ll tmp/
+cd /home/qczhang/usr/software/ucsc_tools/
+ll 
+mv kent old
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+unzip jksrc.zip 
+ll 
+ll kent/
+ll 
+grep "^#" /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+grep "#" /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+ll 
+mv kent/ origin_ken
+mv origin_ken/ origin_kent
+ll 
+mv old/ kent
+ll 
+vi /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc
+cd /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation
+ll 
+ll | grep -i lastz
+vi runLastzChain.sh 
+vi blastz-make-joblist 
+ll 
+cd p
+cd -
+ll 
+cd test/
+ll 
+cd -
+qsub -cwd -N test -l h_vmem=6G -l h_rt=05:50:00 -m ea -M qczhang@stanford.edu -w e -b y /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc ~/work/genomeAlignment/test/tParts/part065.lst ~/work/genomeAlignment/test/qParts/part007.lst ~/work/genomeAlignment/test/DEF ~/work/genomeAlignment/test/tPart065.qPart007.psl -outFormat psl
+cp /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc 
+cp /home/qczhang/usr/software/ucsc_tools/kent/src/hg/utils/automation/blastz-run-ucsc ./
+vi blastz-run-ucsc 
+ll 
+qsub -cwd -N test -l h_vmem=6G -l h_rt=05:50:00 -m ea -M qczhang@stanford.edu -w e -b y /home/qczhang/work/genomeAlignment/test/blastz-run-ucsc ~/work/genomeAlignment/test/tParts/part065.lst ~/work/genomeAlignment/test/qParts/part007.lst ~/work/genomeAlignment/test/DEF ~/work/genomeAlignment/test/tPart065.qPart007.bothCollapsed.psl -outFormat psl
+qstat
+ll 
+ll tmp/
+ll tmp/ -tr
+cd tmp/
+rm -r blastz.hLpTOr/ blastz.ysxqJS/ blastz.Ur5v1b/ blastz.oewocm/
+ll 
+ll -tr
+qstat
+rm -r blastz.2TEoS9/ blastz.iCiZmh/ blastz.UPDWsZ/
+ll 
+qstat
+cd ..
+ll 
+cat test.e5083198 
+qstat
+ll 
+ll tmp/
+ll tmp/blastz.Ot633z/
+qstt
+qstat
+ll
+head test.o5083199 
+tail test.o5083199 
+ll tmp/blastz.Ot633z/
+ll 
+qstat
+cat test.e5083199
+lastz --help
+lastz --help=files
+ll 
+cat test.e5083198 
+cat test.o5083198 
+ll 
+ll tmp/blastz.8DMenp/
+ll 
+cd ..
+l 
+ll
+ll nm1_pan2/
+ll nm1_pan2/lastz_shell/
+ll 
+ll nm1_pan2/
+ll nm1_pan2/net/
+qrsh -now n
+grep chain nm1_pan2/net/nomLeu1.panTro2.over.chain  > xxx
+ll 
+vi xxx 
+perl dotplot/chainTognuplot.pl 
+head xxx 
+cut -f3,8 -d" " xxx | sort | uniq -c > yyy
+vi yyy 
+qstat
+ll 
+perl dotplot/chainTognuplot.pl -c nm1_pan2/net/nomLeu1.panTro2.over.chain -a GL397264 -b chr11 -s 10000 -o nm1ToPt2.GL397264vschr11.png
+ll tmp/
+ll 
+qstat
+ll 
+cd work/genomeAlignment/
+ll
+head xxx 
+rm xxx yyy 
+ll 
+qstat
+ll 
+ll test/
+ll test/tmp/
+ll test/tmp/blastz.8DMenp/
+ll test/tmp/blastz.8DMenp/ | wc -l
+qstat
+ll 
+ll test/tmp/blastz.8DMenp/ | wc -l
+head test/tmp/blastz.8DMenp/local.lav 
+head -100 test/tmp/blastz.8DMenp/local.lav 
+tail -100 test/tmp/blastz.8DMenp/local.lav 
+ll 
+ll test/tmp/blastz.8DMenp/ | wc -l
+history | wc -l
+qstat
+history | wc -l
+ll test/tmp/blastz.8DMenp/ | wc -l
+exit
+ll 
+cd usr/
+ll 
+cd software/
+ll
+git pull
+git pull quota-alignment/
+history | grep quota-alignment > xxx
+vi xxx 
+ll 
+http://github.com/tanghaibao/quota-alignment.git
+git clone http://github.com/tanghaibao/quota-alignment.git
+git pull http://github.com/tanghaibao/quota-alignment.git
+git checkout http://github.com/tanghaibao/quota-alignment.git
+cd ../
+ll 
+ll -a
+cd ..
+ll 
+ll -a
+ll work/
+ll work/ -a
+ll work/genomeAlignment/
+ll work/genomeAlignment/dotplot/ -a
+ll work/genomeAlignment/dotplot/quota_alignment/
+ll work/genomeAlignment/ -a
+ll 
+ll usr/ -a
+ll sc
+ll usr/scripts/ -a
+cd usr/software/
+l 
+ll 
+rm xxx 
+mv quota-alignment/ quota-alignment_test
+git clone http://github.com/tanghaibao/quota-alignment.git
+ll -a
+git pull 
+git pull quota-alignment
+ll 
+cd quota-alignment
+ll 
+cd scripts/
+ll 
+ll -a blast_plot.py 
+./blast_plot.py 
+module add python/2.7
+./blast_plot.py 
+cd ../
+ll 
+cd ../
+cd quota-alignment_test/
+ll
+cd scripts/
+ll 
+./blast_plot.py 
+ll 
+cd 
+ll 
+cd usr/software/
+ll 
+cd 
+ll 
+cd work/genomeAlignment/
+ll
+cd work/genomeAlignment/
+ll
+vi doLastz.pl 
+history | grep lastz > xxx
+vi xxx 
+history | grep lastz | grep multiple > xxx
+vi xxx 
+lastz --help=file
+lastz --help=files
+ll 
+rm xxx 
+ll test/
+ll 
+cd work/
+ll
+cd genomeAlignment/
+ll
+cd test/
+ll
+ll tmp/
+ll tmp/blastz.8DMenp/
+ll tmp/blastz.8DMenp/ | head
+head tmp/blastz.8DMenp/bigCollapse.fa 
+ll
+vi blastz-run-ucsc 
+lastz
+lastz --help=files
+vi blastz-run-ucsc 
+ll 
+cd ..
+ll 
+cd nm1
+cd nm1_pan2/
+ll 
+ll lastz_shell/*.sh > xxx
+ll 
+wc -l xxx 
+vi xxx 
+ls lastz_shell/*.sh > xxx
+vi xxx 
+ll 
+vi ../test/blastz-run-ucsc 
+ll 
+ll ..
+cd ..
+cd logs/
+ll 
+head log
+wc -l log
+ll 
+ll /home/qczhang/work/genomeAlignment/nm1_pan2//shell/nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000.panTro2.UCSC.12_18_12.2bit:chr1:100000000-200000000.sh
+ll /home/qczhang/work/genomeAlignment/nm1_pan2/lastz_shell/nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000.panTro2.UCSC.12_18_12.2bit:chr1:100000000-200000000.sh
+vi /home/qczhang/work/genomeAlignment/nm1_pan2/lastz_shell/nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000.panTro2.UCSC.12_18_12.2bit:chr1:100000000-200000000.sh
+vi doLastz.pl 
+ll 
+cat /home/qczhang/work/genomeAlignment/nm1_pan2/lastz_shell/nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000.panTro2.UCSC.12_18_12.2bit:chr1:100000000-200000000.sh
+/srv/gs1/software/ucsc_tools/2.7.2/bin/x86_64//twoBitToFa /home/qczhang/lib/bowtie-lib/fasta/nomLeu1.UCSC.01_05_13.2bit:GL397261:0-50010000 xxx
+ll 
+wc -l xxx 
+head xxx 
+rm xxx 
+ll 
+vi doLastz.ver1.pl 
+touch xxx
+ll 
+ll 
+rm logs/xxx 
+while [ -e xxx ]; do sleep 1; done
+COUNT=10
+touch xxx
+while [ -e xxx ]; do if [ COUNT ==0 ]; break; fi; COUNT = COUNT - 1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT ==0 ]; then break; fi; COUNT = COUNT - 1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT ==0 ]; then break; fi; COUNT = $COUNT - 1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT ==0 ]; then break; fi; $COUNT = $COUNT - 1; sleep 1; done
+echo $COUNT
+while [ -e xxx ]; do if [ COUNT ==0 ]; then break; fi; COUNT = $COUNT - 1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT ==0 ]; then break; fi; echo $COUNT; COUNT = $COUNT - 1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT ==0 ]; then break; fi; echo $COUNT; $COUNT = $COUNT - 1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT ==0 ]; then break; fi; echo $COUNT; COUNT=$COUNT-1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT ==0 ]; then break; fi; echo $COUNT; COUNT=$COUNT - 1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT==0 ]; then break; fi; echo $COUNT; COUNT=$COUNT - 1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT==0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT == 0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+while [ -e xxx ]; do if [ COUNT = 0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+COUNT=10
+while [ -e xxx ]; do if [ COUNT = 0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+COUNT=10
+while [ -e xxx ]; do if [ $COUNT <= 0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+while [ -e xxx ]; do if [ $COUNT<=0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+while [ -e xxx ]; do if [ $COUNT lt 0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+while [ -e xxx ]; do if [ $COUNT -lt 0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+ll 
+while [ -e xxx ]; do if [ $COUNT -lt 0 ]; then break; fi; echo $COUNT; let $COUNT=$COUNT-1; sleep 1; done
+$COUNT=10
+COUNT=10
+while [ -e xxx ]; do if [ $COUNT -lt 0 ]; then break; fi; echo $COUNT; let $COUNT=$COUNT-1; sleep 1; done
+while [ -e xxx ]; do if [ $COUNT -lt 0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+vi doLastz.ver1.pl 
+COUNT=10
+rm logs/xxx 
+while [ -e xxx ]; do if [ $COUNT -lt 0 ]; then break; fi; echo $COUNT; let COUNT=$COUNT-1; sleep 1; done
+vi doLastz.ver1.pl 
+ll 
+exit
+exit
+ll 
+cd work/genomeAlignment/
+ll
+which flock
+flock
+vi doLastz.ver1.pl 
+vi doLastz.pl
+mv doLastz.pl doLastz.mul.pl
+mv doLastz.mul.pl doLastz.multi.pl 
+ll 
+cp doLastz.ver1.pl doLastz.ver2.pl
+vi doLastz.ver1.pl 
+cd work/genomeAlignment/
+ll 
+perl -c doLastz.ver2.pl 
+vi doLastz.ver2.pl 
+ll 
+cp doLastz.ver1.pl /home/qczhang/usr/scripts/blastz-run-stanford
+vi doLastz.ver2.pl 
+vi /home/qczhang/usr/scripts/blastz-run-stanford
+ll 
+ll nm1_pan2/
+ll nm1_pan2/ -h
+vi /home/qczhang/usr/scripts/blastz-run-stanford
+head nm1_pan2/query.list 
+head nm1_pan2/query.lift
+vi /home/qczhang/usr/scripts/blastz-run-stanford
+perl -c /home/qczhang/usr/scripts/blastz-run-stanford
+vi /home/qczhang/usr/scripts/blastz-run-stanford
+ll 
+vi doLastz.ver2.pl 
+vi doLastz.ver1.pl 
+cat doLastz.ver1.pl >> doLastz.ver2.pl 
+cd ~/
